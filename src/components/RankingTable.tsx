@@ -50,47 +50,40 @@ export default function RankingTable({ data, className = '' }: RankingTableProps
   return (
     <div className={`w-full ${className}`}>
       {/* Prima riga intestazione - Classifiche per categoria */}
-      <div className="bg-blue-900 text-white">
-        <div className="flex">
-          <div className="w-16 px-4 py-2 text-xs font-semibold text-center border-r border-blue-700">
+      <div className="bg-blu text-white">
+        <div className="ranking-table-grid h-5">
+          <div className="flex items-center px-2 text-sm font-semibold text-center border-r border-blu">
+            <strong>2025</strong>/
             CLASSIFICA
           </div>
-          <div className="flex-1 px-4 py-2 text-xs font-semibold border-r border-blue-700">
-            {/* Spazio per allineamento */}
-          </div>
-          <div className="w-48 px-4 py-2 text-xs font-semibold border-r border-blue-700">
-            {/* Spazio per allineamento */}
-          </div>
           
-          {/* Tab categorie */}
-          {data.categorie.map((categoria) => (
-            <button
-              key={categoria.id}
-              onClick={() => setCategoriaAttiva(categoria.id)}
-              className={`category-tab w-32 px-4 py-2 text-xs font-semibold transition-colors border-r border-blue-700 last:border-r-0 ${
-                categoriaAttiva === categoria.id 
-                  ? 'bg-blue-700 text-white' 
-                  : 'bg-blue-800 text-blue-200 hover:bg-blue-700 hover:text-white'
-              }`}
-            >
-              {categoria.nome.toUpperCase()}
-            </button>
-          ))}
-          
-          <div className="w-20 px-4 py-2 text-xs font-semibold text-center">
-            {/* Spazio per allineamento */}
+          <div className="col-span-4 grid grid-cols-4 gap-0">
+            {/* Tab categorie */}
+            {data.categorie.map((categoria) => (
+              <button
+                key={categoria.id}
+                onClick={() => setCategoriaAttiva(categoria.id)}
+                className={`category-tab  text-m font-semibold transition-colors border-l border-white last:border-r-0 cursor-pointer text-left px-2 ${
+                  categoriaAttiva === categoria.id 
+                    ? 'text-white' 
+                    : 'text-white/30 hover:text-white'
+                }`}
+              >
+                {categoria.nome.toUpperCase()}
+              </button>
+            ))}
           </div>
         </div>
       </div>
 
       {/* Seconda riga intestazione - Colonne ordinabili */}
-      <div className="bg-blue-800 text-white">
-        <div className="flex">
+      <div className="bg-white text-black h-5 border-y border-black">
+        <div className="ranking-table-grid h-5">
           <button 
             onClick={() => handleOrdinamento('posizione')}
-            className="sortable-header w-16 px-4 py-3 text-sm font-semibold hover:bg-blue-700 transition-colors border-r border-blue-600 text-center"
+            className="sortable-header px-2 text-sm text-left"
           >
-            POS. 
+            POSIZIONE 
             <span className="sort-indicator">
               <SortIcon 
                 tipo={getTipoIconaOrdinamento('posizione', ordinamento.colonna, ordinamento.direzione)}
@@ -101,7 +94,7 @@ export default function RankingTable({ data, className = '' }: RankingTableProps
           
           <button 
             onClick={() => handleOrdinamento('nome')}
-            className="sortable-header flex-1 px-4 py-3 text-sm font-semibold hover:bg-blue-700 transition-colors border-r border-blue-600 text-left"
+            className="sortable-header px-2 text-sm  text-left border-l border-black"
           >
             NOME 
             <span className="sort-indicator">
@@ -114,7 +107,7 @@ export default function RankingTable({ data, className = '' }: RankingTableProps
           
           <button 
             onClick={() => handleOrdinamento('cittaRegione')}
-            className="sortable-header w-48 px-4 py-3 text-sm font-semibold hover:bg-blue-700 transition-colors border-r border-blue-600 text-left"
+            className="sortable-header px-2 text-sm  text-left border-l border-black"
           >
             CITTÀ/REGIONE 
             <span className="sort-indicator">
@@ -127,7 +120,7 @@ export default function RankingTable({ data, className = '' }: RankingTableProps
           
           <button 
             onClick={() => handleOrdinamento('punteggio')}
-            className="sortable-header w-32 px-4 py-3 text-sm font-semibold hover:bg-blue-700 transition-colors border-r border-blue-600 text-center"
+            className="sortable-header px-2 text-sm  text-left border-l border-black"
           >
             PUNTEGGIO 
             <span className="sort-indicator">
@@ -140,7 +133,7 @@ export default function RankingTable({ data, className = '' }: RankingTableProps
           
           <button 
             onClick={() => handleOrdinamento('variazione')}
-            className="sortable-header w-20 px-4 py-3 text-sm font-semibold hover:bg-blue-700 transition-colors text-center"
+            className="sortable-header px-2 text-sm  text-left border-l border-black"
           >
             VAR. 
             <span className="sort-indicator">
@@ -163,13 +156,6 @@ export default function RankingTable({ data, className = '' }: RankingTableProps
           />
         ))}
       </div>
-
-      {/* Footer con descrizione categoria */}
-      {categoriaAttuale && (
-        <div className="bg-gray-50 px-4 py-3 text-sm text-gray-600 border-t">
-          <strong>{categoriaAttuale.nome}:</strong> {categoriaAttuale.descrizione}
-        </div>
-      )}
     </div>
   );
 }
@@ -187,31 +173,31 @@ function RigaTabella({ riga, isEven }: RigaTabellaProps) {
   const contenutoRiga = (
     <>
       {/* Posizione */}
-      <div className="w-16 px-4 py-4 text-center font-bold text-blue-900">
+      <div className="px-2 pl-4 text-center font-bold text-blu h-full flex items-center">
         ({posizione})
       </div>
       
       {/* Nome ospedale */}
-      <div className="flex-1 px-4 py-4">
-        <div className="font-semibold text-gray-900 text-sm leading-tight">
+      <div className="px-2 border-l border-black h-full flex items-center">
+        <div className="font-semibold text-black text-sm leading-tight">
           {ospedale.nome}
         </div>
       </div>
       
       {/* Città/Regione */}
-      <div className="w-48 px-4 py-4 text-sm text-gray-600">
+      <div className="px-2 font-semibold border-l border-black h-full flex items-center">
         {cittaRegione}
       </div>
       
       {/* Punteggio */}
-      <div className="w-32 px-4 py-4 text-center">
-        <div className="text-2xl font-bold text-blue-900">
+      <div className="px-2 border-l border-black h-full flex items-center">
+        <div className="text-sm font-bold text-black">
           {punteggio}
         </div>
       </div>
       
       {/* Variazione */}
-      <div className="w-20 px-4 py-4 text-center">
+      <div className="px-2 border-l border-black h-full flex items-center">
         <span className={`font-semibold ${variazioneColorClass}`}>
           {variazioneText}
         </span>
@@ -219,7 +205,7 @@ function RigaTabella({ riga, isEven }: RigaTabellaProps) {
     </>
   );
 
-  const rowClasses = `flex items-center border-b border-gray-200 table-row-hover ${
+  const rowClasses = `ranking-table-grid h-7 items-center border-b border-black  last:border-b-0 table-row-hover ${
     isEven ? 'bg-gray-25' : 'bg-white'
   }`;
 

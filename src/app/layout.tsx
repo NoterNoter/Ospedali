@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import VerticalLines from "@/components/VerticalLines";
-
+import LenisScrollProvider from "./providers/lenis-provider";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -41,11 +41,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <VerticalLines />
-        <div className="max-w-[1440px] mx-auto">
-          
-          {children}
-        </div>
+          <VerticalLines />
+          <div className="max-w-[1440px] mx-auto">
+            {children}
+          </div>
       </body>
     </html>
   );

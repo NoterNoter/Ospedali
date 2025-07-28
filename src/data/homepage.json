@@ -4,20 +4,17 @@
     "descrizione": "La classifica ufficiale degli ospedali italiani di eccellenza per categoria specialistica",
     "slug": "migliori-ospedali-italia-2025"
   },
+  "intro": {
+    "occhiello": "La prima iniziativa editoriale in Italia che premiale performance delle strutture ospedaliere pubbliche e private",
+    "titolo": "Best Italian Hospital, individuandole eccellenze ospedaliere su tutto il territorio nazionale, favorisce il confronto tra pubblico e privato",
+    "card": 
+      {
+        "id": "ospedali-analizzati",
+        "titolo": "Il metodo",
+        "descrizione": "Ogni anno Class Editori elabora una classifica basata su uno  score multiparametrico, che prende in esame dati clinici, attività di formazione, ricerca e  reputazione"
+      }
+  },
   "sezioni": [
-    {
-      "id": "hero",
-      "tipo": "hero",
-      "titolo": "I Migliori Ospedali d'Italia",
-      "sottotitolo": "La classifica 2025 degli ospedali di eccellenza",
-      "descrizione": "Scopri i centri sanitari che rappresentano l'eccellenza della medicina italiana, valutati attraverso criteri scientifici rigorosi e analisi comparative approfondite."
-    },
-    {
-      "id": "introduzione",
-      "tipo": "testo",
-      "titolo": "Metodologia e Criteri di Valutazione",
-      "contenuto": "La classifica degli ospedali italiani 2025 è stata realizzata attraverso un'analisi completa che considera diversi parametri fondamentali: qualità delle cure, innovazione tecnologica, ricerca scientifica, efficienza organizzativa e soddisfazione dei pazienti. I dati sono stati raccolti da fonti ufficiali del Ministero della Salute, AGENAS e dai principali istituti di ricerca sanitaria del paese."
-    },
     {
       "id": "statistiche",
       "tipo": "card-info",

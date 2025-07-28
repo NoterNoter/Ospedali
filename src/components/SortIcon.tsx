@@ -1,26 +1,56 @@
 interface SortIconProps {
-  tipo: 'asc' | 'desc' | 'neutral';
+  tipo: "asc" | "desc" | "neutral";
   isActive: boolean;
 }
 
 export default function SortIcon({ tipo, isActive }: SortIconProps) {
-  const baseClassName = `inline-block ml-1 transition-opacity ${isActive ? 'opacity-100' : 'opacity-50'}`;
+  const baseClassName = `inline-block ml-1 transition-opacity ${
+    isActive ? "opacity-100" : "opacity-50"
+  }`;
 
-  if (tipo === 'asc') {
+  if (tipo === "asc") {
     return (
       <span className={baseClassName}>
-        <svg className="w-3 h-3 inline" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z" clipRule="evenodd" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="14"
+          fill="none"
+          viewBox="0 0 30 14"
+        >
+          <path
+            fill="#000"
+            d="m7.584 9.433 3.129-3.129.824.825L7 11.667 2.463 7.129l.825-.825 3.129 3.13v-7.1h1.167z"
+          ></path>
+          <path
+            fill="#000"
+            fillOpacity="0.2"
+            d="M23.584 4.567v7.1h-1.167v-7.1l-3.13 3.129-.824-.825L23 2.333l4.537 4.538-.825.825z"
+          ></path>
         </svg>
       </span>
     );
   }
 
-  if (tipo === 'desc') {
+  if (tipo === "desc") {
     return (
       <span className={baseClassName}>
-        <svg className="w-3 h-3 inline" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+          <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="14"
+          fill="none"
+          viewBox="0 0 30 14"
+        >
+          <path
+            fill="#000"
+             fillOpacity="0.2"
+            d="m7.584 9.433 3.129-3.129.824.825L7 11.667 2.463 7.129l.825-.825 3.129 3.13v-7.1h1.167z"
+          ></path>
+          <path
+            fill="#000"
+            d="M23.584 4.567v7.1h-1.167v-7.1l-3.13 3.129-.824-.825L23 2.333l4.537 4.538-.825.825z"
+          ></path>
         </svg>
       </span>
     );
@@ -29,8 +59,17 @@ export default function SortIcon({ tipo, isActive }: SortIconProps) {
   // neutral
   return (
     <span className={baseClassName}>
-      <svg className="w-3 h-3 inline" fill="currentColor" viewBox="0 0 20 20">
-        <path d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 16a1 1 0 011-1h4a1 1 0 110 2H4a1 1 0 01-1-1z" />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="30"
+        height="14"
+        fill="none"
+        viewBox="0 0 30 14"
+      >
+        <path
+          fill="#000"
+          d="m7.584 9.433 3.129-3.129.824.825L7 11.667 2.463 7.129l.825-.825 3.129 3.13v-7.1h1.167zM23.584 4.567v7.1h-1.167v-7.1l-3.13 3.129-.824-.825L23 2.333l4.537 4.538-.825.825z"
+        ></path>
       </svg>
     </span>
   );

@@ -1,16 +1,20 @@
 # Struttura Classifica Ospedali
 
-## Intestazione Doppia
+## Layout CSS Grid
 
-La classifica utilizza una doppia intestazione:
+La classifica utilizza **CSS Grid** con 5 colonne equivalenti per garantire allineamento perfetto e distribuzione uniforme dello spazio.
 
-### Prima Riga - Selezione Categoria
+### Intestazione Doppia
+
+#### Prima Riga - Selezione Categoria
 - **CLASSIFICA** | **POLICLINICI** | **CARDIOLOGIA** | **ONCOLOGIA** | **ORTOPEDIA**
 - Le tab delle categorie sono cliccabili e cambiano i dati visualizzati
+- Layout: `grid-template-columns: repeat(5, 1fr)`
 
-### Seconda Riga - Colonne Ordinabili  
+#### Seconda Riga - Colonne Ordinabili  
 - **POS.** | **NOME** | **CITTÀ/REGIONE** | **PUNTEGGIO** | **VAR.**
 - Tutte le colonne sono cliccabili per ordinamento
+- Stesso layout grid per allineamento perfetto
 
 ## Colonne della Tabella
 
@@ -34,6 +38,30 @@ La classifica utilizza una doppia intestazione:
 - Icona **↓** per ordinamento decrescente  
 - Icona **≡** per colonne non attive
 - Animazioni smooth per transizioni
+
+## CSS Grid Implementation
+
+### Classi CSS Personalizzate
+
+```css
+.ranking-table-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  width: 100%;
+}
+
+.ranking-table-grid > * {
+  min-width: 0; /* Allow text to wrap */
+  word-wrap: break-word;
+}
+```
+
+### Vantaggi CSS Grid vs Flexbox
+- ✅ **Colonne perfettamente uguali** (20% ciascuna)
+- ✅ **Allineamento verticale garantito** tra header e righe
+- ✅ **Responsive automatico** senza media queries complesse
+- ✅ **Text wrapping controllato** per nomi lunghi
+- ✅ **Performance migliore** per tabelle grandi
 
 ## Utilizzo delle Utilities
 

@@ -8,6 +8,7 @@
 @theme inline {
   --color-background: #F2F2F2;
   --color-blu: #0101A1;
+  --color-gray: #ECECEC;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --spacing-1: 10px;
@@ -41,8 +42,6 @@
 
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 html,
@@ -131,15 +130,7 @@ html {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-/* Table hover effects enhancement */
-.table-row-hover {
-  transition: all 0.2s ease-in-out;
-}
 
-.table-row-hover:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
 
 /* Sortable table headers */
 .sortable-header {
@@ -148,13 +139,6 @@ html {
   position: relative;
 }
 
-.sortable-header:hover {
-  background-color: rgba(59, 130, 246, 0.1);
-}
-
-.sortable-header:active {
-  transform: scale(0.98);
-}
 
 /* Sort indicator animation */
 .sort-indicator {
@@ -167,67 +151,64 @@ html {
   overflow: hidden;
 }
 
-.category-tab::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
+
+
+/* CSS Grid table layout */
+.ranking-table-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-  transition: left 0.5s;
 }
 
-.category-tab:hover::before {
-  left: 100%;
+/* Ensure equal column width distribution */
+.ranking-table-grid > * {
+  min-width: 0; /* Allow text to wrap */
+  word-wrap: break-word;
 }
 
-/* Prose styles for rich text content */
-.prose {
-  max-width: none;
-}
-
-.prose p {
-  margin-bottom: 1.5rem;
-  line-height: 1.7;
-}
-
-.prose h2 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  font-weight: 700;
-  line-height: 1.3;
-}
-
-.prose ul {
-  margin-bottom: 1.5rem;
-}
-
-.prose li {
-  margin-bottom: 0.5rem;
-}
-
-.prose blockquote {
-  margin: 2rem 0;
-}
-
-/* Mobile optimizations */
+/* Responsive adjustments for grid */
 @media (max-width: 768px) {
-  .hero-title {
-    font-size: 2.5rem;
-    line-height: 1.2;
+  .ranking-table-grid {
+    font-size: 0.875rem;
   }
   
-  .hero-subtitle {
-    font-size: 1.25rem;
-  }
-  
-  .section-title {
-    font-size: 2rem;
-  }
-  
-  .card-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+  .ranking-table-grid .px-4 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 }
+
+
+.split-line-custom {
+  display: inline-block;
+  clip-path: inset(-20% -20% -10% -20%);
+  opacity: 0;
+  transform: translateY(40%);
+  --speed: 1.25s;
+  --stagger: 0.025s;
+  transition:
+    clip-path var(--speed) cubic-bezier(.19,1,.22,1) calc(var(--index,0)*var(--stagger) + var(--delay,0)*var(--speed)),
+    opacity var(--speed) cubic-bezier(.19,1,.22,1) calc(var(--index,0)*var(--stagger) + var(--delay,0)*var(--speed)),
+    transform var(--speed) cubic-bezier(.19,1,.22,1) calc(var(--index,0)*var(--stagger) + var(--delay,0)*var(--speed));
+}
+
+.split-line-custom.revealed {
+  clip-path: inset(0 0 0 0);
+  opacity: 1;
+  transform: none;
+}
+
+/* 3D Transform utilities for slides */
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+
+/* Text outline with specific color */
+.text-outline-blu {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #0101A1;
+  text-stroke: 1px #0101A1;
+}
+
+
