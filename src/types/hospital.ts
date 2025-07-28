@@ -163,6 +163,57 @@ export type HomepageSezione =
   | HomepageSezioneCta;
 
 // Interfaccia per i dati completi della homepage
+export interface ClassificaData {
+  titolo_up: string;
+  titolo_down: string;
+  descrizione: string;
+  rows: {
+    id: string;
+    cards: {
+      numero: string;
+      id: string;
+      titolo: string;
+      valore: string;
+      location: string;
+      link: string;
+    }[];
+  }[];
+}
+
+export interface ApprofondimentoData {
+  titolo: string;
+  descrizione: string;
+  rows: {
+    id: string;
+    cards: {
+      numero: string;
+      id: string;
+      titolo: string;
+      valore: string;
+      location: string;
+      link: string;
+    }[];
+  }[];
+}
+
+export interface InfograficaData {
+  titolo: string;
+  descrizione: string;
+  flourish: string;
+  titolo_classifica: string;
+  valori: {
+    id: string;
+    valore: {
+      numero: string;
+      id: string;
+      titolo: string;
+      città: string;
+      regione: string;
+      link: string;
+    }[];
+  }[];
+}
+
 export interface HomepageData {
   metadata: {
     titolo: string;
@@ -187,5 +238,18 @@ export interface HomepageData {
       descrizione: string;
     };
   };
+  text_2: {
+    tipo: string;
+    testo: string;
+    card: {
+      id: string;
+      titolo: string;
+      descrizione: string;
+    };
+  };
+  classifica_1: ClassificaData;
+  classifica_2: ClassificaData;
+  approfondimento_1: ApprofondimentoData;
+  infografica_1: InfograficaData;
   sezioni: HomepageSezione[];
 }

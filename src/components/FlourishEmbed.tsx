@@ -1,65 +1,36 @@
-'use client';
+import React from 'react';
 
-import { useEffect, useRef } from 'react';
-
-interface FlourishEmbedProps {
-  embedUrl: string;
-  didascalia?: string;
-  className?: string;
-}
-
-export default function FlourishEmbed({ 
-  embedUrl, 
-  didascalia, 
-  className = '' 
-}: FlourishEmbedProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!containerRef.current) return;
-
-    // Estrai l'ID della visualizzazione dall'URL
-    const visualizationId = embedUrl.split('/').pop()?.replace('/', '');
-    
-    if (!visualizationId) {
-      console.error('ID visualizzazione Flourish non valido:', embedUrl);
-      return;
-    }
-
-    // Crea l'iframe per l'embed Flourish
-    const iframe = document.createElement('iframe');
-    iframe.src = `https://flo.uri.sh/visualisation/${visualizationId}/embed`;
-    iframe.style.width = '100%';
-    iframe.style.height = '600px';
-    iframe.style.border = 'none';
-    iframe.title = 'Visualizzazione interattiva';
-    iframe.allowFullscreen = true;
-
-    // Svuota il container e aggiungi l'iframe
-    containerRef.current.innerHTML = '';
-    containerRef.current.appendChild(iframe);
-
-    // Cleanup
-    return () => {
-      const container = containerRef.current;
-      if (container) {
-        container.innerHTML = '';
-      }
-    };
-  }, [embedUrl]);
+const FlourishEmbed = ({ embedUrl, height = '800px', heightMobile = '600px' }: { embedUrl: string, height?: string, heightMobile?: string }) => {
+  // Gestisce diversi formati di URL Flourish
+  let iframeUrl = embedUrl;
+  
+  if (embedUrl.includes('public.flourish.studio/visualisation/')) {
+    // Converte da https://public.flourish.studio/visualisation/14410013/ a embed URL
+    const visualisationId = embedUrl.match(/visualisation\/(\d+)/)?.[1];
+    iframeUrl = `https://flo.uri.sh/visualisation/${visualisationId}/embed`;
+  } else if (!embedUrl.startsWith('http')) {
+    // Se è solo un ID, costruisci l'URL dell'iframe
+    iframeUrl = `https://flo.uri.sh/visualisation/${embedUrl}/embed`;
+  }
 
   return (
-    <div className={`w-full ${className}`}>
-      <div 
-        ref={containerRef}
-        className="w-full bg-gray-100 rounded-lg overflow-hidden shadow-lg"
-        style={{ minHeight: '600px' }}
+    <div style={{ height: height }} className={`w-full relative infografica`}>
+      <iframe
+        src={iframeUrl}
+        frameBorder="0"
+        scrolling="no"
+        style={{
+          width: '100%',
+          height: '100%',
+          position: 'absolute',
+          top: 0,
+          left: 0,
+        }}
+        allowFullScreen
+        allow="clipboard-write"
       />
-      {didascalia && (
-        <p className="text-sm text-gray-600 mt-4 italic text-center">
-          {didascalia}
-        </p>
-      )}
     </div>
   );
-}
+};
+
+export default FlourishEmbed;

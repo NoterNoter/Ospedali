@@ -1,6 +1,6 @@
 import React from "react";
 import CardInfo from "./CardInfo";
-import CardApprofondimento from "./CardApprofondimento";
+import CardApprofondimentoImage from "./CardApprofondimentoImage";
 
 interface TextProps {
   className?: string;
@@ -26,7 +26,7 @@ export default function Text({ text, className }: TextProps) {
     <section className={`grid grid-cols-5 relative h-full ${className}`}>
       <div className="col-span-1 col-start-1 self-end">
         {text.approfondimento && (
-          <CardApprofondimento
+          <CardApprofondimentoImage
             className=""
             approfondimento={text.approfondimento}
           />

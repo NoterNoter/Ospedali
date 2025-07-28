@@ -29,7 +29,7 @@ export default function Hero() {
             <span>
               <ScrollDown />
             </span>
-            <p className="max-w-[500px] font-medium text-blu leading-tight">
+            <p className="max-w-[400px] font-medium text-blu leading-tight">
               Scopri le classifica 2025 che premia l’eccellenza ospedaliera
               italiana e segnalale strutture sanitarie più virtuose del Paese
             </p>

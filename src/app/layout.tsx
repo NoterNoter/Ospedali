@@ -4,6 +4,7 @@ import "./globals.css";
 import VerticalLines from "@/components/VerticalLines";
 import LenisScrollProvider from "./providers/lenis-provider";
 import localFont from 'next/font/local';
+import Header from "@/components/Header";
 
 
 const sans = localFont({
