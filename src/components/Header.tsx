@@ -26,6 +26,7 @@ export default function Header() {
   return (
     <>
       <header className="sticky top-0 z-50 bg-white border-b border-black">
+        <div className='relative'>
         <div className="grid grid-cols-5">
 
           <div className="text-sm uppercase flex items-center font-semibold col-span-1 border-r border-black pl-4 pr-2">
@@ -55,39 +56,19 @@ export default function Header() {
             </svg>
           </button>
         </div>
-      </header>
-
-      {isModalOpen && (
-        <div className="fixed left-0 right-0 z-40 bg-white border-b border-black animate-slide-down" style={{ top: '4rem' }}>
+        {isModalOpen && (
+        <div className="left-0 top-6 right-0 z-100 bg-white border-b border-black animate-slide-down">
           <div className="h-screen flex flex-col">
-            <div className="flex justify-between items-center p-4 border-b border-black">
-              <h2 className="text-xl font-semibold">Classifica Ospedali</h2>
-              <button
-                onClick={closeModal}
-                className="flex items-center justify-center w-8 h-8 hover:bg-gray-100 transition-colors"
-              >
-                <svg 
-                  width="16" 
-                  height="16" 
-                  viewBox="0 0 16 16" 
-                  fill="none"
-                >
-                  <path 
-                    d="M12 4L4 12M4 4L12 12" 
-                    stroke="currentColor" 
-                    strokeWidth="2" 
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </button>
-            </div>
-            
-            <div className="flex-1 overflow-auto">
+            <div className="flex-1 overflow-auto px-0">
               <RankingTable data={ospedaliData} />
             </div>
           </div>
         </div>
       )}
+      </div>
+      </header>
+
+     
     </>
   );
 }

@@ -21,7 +21,7 @@ export default function Home() {
       <section id="ranking-table" className="bg-white">
           <RankingTable 
             data={ospedaliData}
-            className="rounded-lg overflow-hidden border border-gray-200"
+            className="rounded-lg  border border-gray-200"
           />
       </section>
 
