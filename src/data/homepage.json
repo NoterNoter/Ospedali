@@ -14,6 +14,23 @@
         "descrizione": "Ogni anno Class Editori elabora una classifica basata su uno  score multiparametrico, che prende in esame dati clinici, attività di formazione, ricerca e  reputazione"
       }
   },
+
+  "text_1": {
+    "tipo": "testo",
+    "testo": "<p><strong>I Migliori Ospedali d'Italia 2025 </strong> Nibh feugiat metus vel nunc faucibus dignissim mollis vel platea. Nec cras dignissim rutrum augue tristique id. Mauris ullamcorper non nibh in convallis non molestie tincidunt. Sed commodo gravida laoreet iaculis iaculis. Ipsum diam massa fusce sollicitudin blandit ut. Ut interdum orci morbi mauris id faucibus quam.</p><p>Ligula pretium et ac justo nulla pulvinar at fermentum arcu. Nibh eu posuere euismod nisi erat arcu purus. Porttitor tempus sapien scelerisque risus tristique. Maecenas et id eget id consectetur morbi malesuada ut. Euismod elit etiam porttitor consectetur etiam lorem vulputate netus quis. Ullamcorper proin semper vulputate turpis. Rhoncus semper eu viverra velit imperdiet leo duis venenatis pretium. Massa id at vitae eros. Et in id vulputate nec quis enim porttitor. Lobortis enim porttitor laoreet id cum elementum in amet sed. Eget sed morbi ac et risus morbi elementum cursus gravida.</p><p>Nibh feugiat metus vel nunc faucibus dignissim mollis vel platea. Nec cras dignissim rutrum augue tristique id. Mauris ullamcorper non nibh in convallis non molestie tincidunt. Sed commodo gravida laoreet iaculis iaculis. Ipsum diam massa fusce sollicitudin blandit ut. Ut interdum orci morbi mauris id faucibus quam.</p><p>Ligula pretium et ac justo nulla pulvinar at fermentum arcu. Nibh eu posuere euismod nisi erat arcu purus. Porttitor tempus sapien scelerisque risus tristique. Maecenas et id eget id consectetur morbi malesuada ut. Euismod elit etiam porttitor consectetur etiam lorem vulputate netus quis. Ullamcorper proin semper vulputate turpis. Rhoncus semper eu viverra velit imperdiet leo duis venenatis pretium. Massa id at vitae eros. Et in id vulputate nec quis enim porttitor. Lobortis enim porttitor laoreet id cum elementum in amet sed. Eget sed morbi ac et risus morbi elementum cursus gravida.</p>",
+    "card": 
+      {
+        "id": "ospedali-analizzati",
+        "titolo": "Il metodo",
+        "descrizione": "La graduatoria è articolata in quattro categorie principali: policlinici, centri cardiovascolari, oncologici, e ortopedici"
+      },
+    "approfondimento": {
+      "id": "approfondimento-1",
+      "titolo": "Gruppo San Donato",
+      "image": "/immagini/immagine-1.png",
+      "link": "/ospedale/gruppo-san-donato"
+    }
+  },
   "sezioni": [
     {
       "id": "statistiche",

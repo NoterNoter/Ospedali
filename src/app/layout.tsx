@@ -3,15 +3,30 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import VerticalLines from "@/components/VerticalLines";
 import LenisScrollProvider from "./providers/lenis-provider";
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import localFont from 'next/font/local';
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});   
+
+const sans = localFont({
+  src: [
+    {
+      path: '../../public/fonts/delight-regular.woff',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/delight-semibold.woff',
+      weight: '600',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/delight-medium.woff',
+      weight: '500',
+      style: 'normal',
+    },
+  ],
+  variable: '--font-sans',
+  display: 'swap',
+}); 
 
 export const metadata: Metadata = {
   title: "I Migliori Ospedali d'Italia 2025 | Classifica Ufficiale",
@@ -39,10 +54,10 @@ export default function RootLayout({
   return (
     <html lang="it">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${sans.variable} antialiased`}
       >
           <VerticalLines />
-          <div className="max-w-[1440px] mx-auto">
+          <div className="max-w-[1440px] mx-auto relative z-10">
             {children}
           </div>
       </body>

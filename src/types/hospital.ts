@@ -169,5 +169,23 @@ export interface HomepageData {
     descrizione: string;
     slug: string;
   };
+  intro: {
+    occhiello: string;
+    titolo: string;
+    card: {
+      id: string;
+      titolo: string;
+      descrizione: string;
+    };
+  };
+  text_1: {
+    tipo: string;
+    testo: string;
+    card: {
+      id: string;
+      titolo: string;
+      descrizione: string;
+    };
+  };
   sezioni: HomepageSezione[];
 }
