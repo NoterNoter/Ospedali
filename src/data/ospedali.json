@@ -1,0 +1,311 @@
+{
+  "ospedali": [
+    {
+      "id": "policlinico-gemelli",
+      "nome": "Policlinico Universitario A. Gemelli",
+      "citta": "Roma",
+      "regione": "Lazio",
+      "hasDetailPage": true,
+      "punteggi": {
+        "policlinici": 100,
+        "cardiologia": 95,
+        "oncologia": 98,
+        "ortopedia": 92
+      },
+      "variazioni": {
+        "policlinici": 3,
+        "cardiologia": -2,
+        "oncologia": 5,
+        "ortopedia": 1
+      }
+    },
+    {
+      "id": "san-raffaele",
+      "nome": "IRCCS Ospedale San Raffaele",
+      "citta": "Milano",
+      "regione": "Lombardia",
+      "hasDetailPage": true,
+      "punteggi": {
+        "policlinici": 98,
+        "cardiologia": 100,
+        "oncologia": 95,
+        "ortopedia": 88
+      },
+      "variazioni": {
+        "policlinici": 2,
+        "cardiologia": 4,
+        "oncologia": -1,
+        "ortopedia": -3
+      }
+    },
+    {
+      "id": "humanitas",
+      "nome": "Istituto Clinico Humanitas",
+      "citta": "Rozzano",
+      "regione": "Lombardia",
+      "hasDetailPage": true,
+      "punteggi": {
+        "policlinici": 95,
+        "cardiologia": 92,
+        "oncologia": 100,
+        "ortopedia": 85
+      },
+      "variazioni": {
+        "policlinici": -1,
+        "cardiologia": 3,
+        "oncologia": 7,
+        "ortopedia": 2
+      }
+    },
+    {
+      "id": "niguarda",
+      "nome": "ASST Grande Ospedale Metropolitano Niguarda",
+      "citta": "Milano",
+      "regione": "Lombardia",
+      "hasDetailPage": false,
+      "punteggi": {
+        "policlinici": 92,
+        "cardiologia": 88,
+        "oncologia": 90,
+        "ortopedia": 95
+      },
+      "variazioni": {
+        "policlinici": 1,
+        "cardiologia": -4,
+        "oncologia": 2,
+        "ortopedia": 8
+      }
+    },
+    {
+      "id": "careggi",
+      "nome": "Azienda Ospedaliero-Universitaria Careggi",
+      "citta": "Firenze",
+      "regione": "Toscana",
+      "hasDetailPage": true,
+      "punteggi": {
+        "policlinici": 90,
+        "cardiologia": 85,
+        "oncologia": 88,
+        "ortopedia": 90
+      },
+      "variazioni": {
+        "policlinici": 0,
+        "cardiologia": 2,
+        "oncologia": -3,
+        "ortopedia": 5
+      }
+    },
+    {
+      "id": "sant-orsola",
+      "nome": "Policlinico Sant'Orsola-Malpighi",
+      "citta": "Bologna",
+      "regione": "Emilia-Romagna",
+      "hasDetailPage": false,
+      "punteggi": {
+        "policlinici": 88,
+        "cardiologia": 90,
+        "oncologia": 85,
+        "ortopedia": 82
+      },
+      "variazioni": {
+        "policlinici": -2,
+        "cardiologia": 1,
+        "oncologia": 0,
+        "ortopedia": -1
+      }
+    },
+    {
+      "id": "molinette",
+      "nome": "AOU Città della Salute - Molinette",
+      "citta": "Torino",
+      "regione": "Piemonte",
+      "hasDetailPage": false,
+      "punteggi": {
+        "policlinici": 85,
+        "cardiologia": 82,
+        "oncologia": 87,
+        "ortopedia": 80
+      },
+      "variazioni": {
+        "policlinici": 3,
+        "cardiologia": -1,
+        "oncologia": 4,
+        "ortopedia": 2
+      }
+    },
+    {
+      "id": "policlinico-milano",
+      "nome": "Fondazione IRCCS Ca' Granda Policlinico",
+      "citta": "Milano",
+      "regione": "Lombardia",
+      "hasDetailPage": false,
+      "punteggi": {
+        "policlinici": 83,
+        "cardiologia": 80,
+        "oncologia": 82,
+        "ortopedia": 85
+      },
+      "variazioni": {
+        "policlinici": 1,
+        "cardiologia": -2,
+        "oncologia": 1,
+        "ortopedia": 3
+      }
+    },
+    {
+      "id": "umberto-i",
+      "nome": "Policlinico Umberto I",
+      "citta": "Roma",
+      "regione": "Lazio",
+      "hasDetailPage": false,
+      "punteggi": {
+        "policlinici": 80,
+        "cardiologia": 78,
+        "oncologia": 80,
+        "ortopedia": 78
+      },
+      "variazioni": {
+        "policlinici": -1,
+        "cardiologia": 0,
+        "oncologia": -2,
+        "ortopedia": 1
+      }
+    },
+    {
+      "id": "borgo-trento",
+      "nome": "Azienda Ospedaliera Universitaria di Verona",
+      "citta": "Verona",
+      "regione": "Veneto",
+      "hasDetailPage": false,
+      "punteggi": {
+        "policlinici": 78,
+        "cardiologia": 75,
+        "oncologia": 78,
+        "ortopedia": 100
+      },
+      "variazioni": {
+        "policlinici": 2,
+        "cardiologia": 1,
+        "oncologia": 0,
+        "ortopedia": 12
+      }
+    },
+    {
+      "id": "spedali-civili",
+      "nome": "ASST Spedali Civili di Brescia",
+      "citta": "Brescia",
+      "regione": "Lombardia",
+      "hasDetailPage": false,
+      "punteggi": {
+        "policlinici": 75,
+        "cardiologia": 72,
+        "oncologia": 75,
+        "ortopedia": 88
+      },
+      "variazioni": {
+        "policlinici": 0,
+        "cardiologia": -1,
+        "oncologia": 2,
+        "ortopedia": 6
+      }
+    },
+    {
+      "id": "san-martino",
+      "nome": "IRCCS Ospedale Policlinico San Martino",
+      "citta": "Genova",
+      "regione": "Liguria",
+      "hasDetailPage": false,
+      "punteggi": {
+        "policlinici": 73,
+        "cardiologia": 70,
+        "oncologia": 72,
+        "ortopedia": 75
+      },
+      "variazioni": {
+        "policlinici": -2,
+        "cardiologia": 1,
+        "oncologia": -1,
+        "ortopedia": 0
+      }
+    },
+    {
+      "id": "padova",
+      "nome": "Azienda Ospedale-Università Padova",
+      "citta": "Padova",
+      "regione": "Veneto",
+      "hasDetailPage": false,
+      "punteggi": {
+        "policlinici": 70,
+        "cardiologia": 68,
+        "oncologia": 70,
+        "ortopedia": 72
+      },
+      "variazioni": {
+        "policlinici": 1,
+        "cardiologia": 2,
+        "oncologia": 0,
+        "ortopedia": -1
+      }
+    },
+    {
+      "id": "pisa",
+      "nome": "Azienda Ospedaliero-Universitaria Pisana",
+      "citta": "Pisa",
+      "regione": "Toscana",
+      "hasDetailPage": false,
+      "punteggi": {
+        "policlinici": 68,
+        "cardiologia": 65,
+        "oncologia": 68,
+        "ortopedia": 70
+      },
+      "variazioni": {
+        "policlinici": -1,
+        "cardiologia": 0,
+        "oncologia": 1,
+        "ortopedia": 2
+      }
+    },
+    {
+      "id": "federico-ii",
+      "nome": "AOU Federico II",
+      "citta": "Napoli",
+      "regione": "Campania",
+      "hasDetailPage": false,
+      "punteggi": {
+        "policlinici": 65,
+        "cardiologia": 62,
+        "oncologia": 65,
+        "ortopedia": 68
+      },
+      "variazioni": {
+        "policlinici": 0,
+        "cardiologia": -3,
+        "oncologia": 1,
+        "ortopedia": 4
+      }
+    }
+  ],
+  "categorie": [
+    {
+      "id": "policlinici",
+      "nome": "Policlinici",
+      "descrizione": "Classifica generale dei policlinici universitari"
+    },
+    {
+      "id": "cardiologia",
+      "nome": "Cardiologia",
+      "descrizione": "Eccellenza in cardiologia e cardiochirurgia"
+    },
+    {
+      "id": "oncologia",
+      "nome": "Oncologia",
+      "descrizione": "Centri di eccellenza oncologica"
+    },
+    {
+      "id": "ortopedia",
+      "nome": "Ortopedia",
+      "descrizione": "Eccellenza in ortopedia e traumatologia"
+    }
+  ]
+}

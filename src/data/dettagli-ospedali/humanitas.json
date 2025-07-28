@@ -1,0 +1,59 @@
+{
+  "id": "humanitas",
+  "titolo": "Istituto Clinico Humanitas: L'Eccellenza nell'Oncologia",
+  "sottotitolo": "Un centro di riferimento mondiale per la lotta contro il cancro",
+  "contenuto": [
+    {
+      "tipo": "paragrafo",
+      "testo": "L'Istituto Clinico Humanitas di Rozzano rappresenta una delle realtà più avanzate nella cura e ricerca oncologica a livello internazionale. Fondato nel 1996 con la visione di creare un ospedale ‘a misura di paziente’, Humanitas ha saputo evolversi fino a diventare un punto di riferimento mondiale per l'innovazione in campo medico."
+    },
+    {
+      "tipo": "titolo",
+      "testo": "Il Comprehensive Cancer Center"
+    },
+    {
+      "tipo": "paragrafo",
+      "testo": "Il Cancer Center di Humanitas è riconosciuto come uno dei più completi d'Europa, con un approccio multidisciplinare che integra oncologia medica, chirurgia oncologica, radioterapia e medicina nucleare. La struttura tratta oltre 9.000 nuovi pazienti oncologici ogni anno, offrendo protocolli terapeutici personalizzati e accesso alle più innovative terapie sperimentali."
+    },
+    {
+      "tipo": "lista",
+      "elementi": [
+        "Centro di riferimento per i tumori rari e complessi",
+        "Programma di medicina di precisione con profilazione genomica",
+        "Unità di immunoterapia e terapie innovative",
+        "Centro di radioterapia con tecnologie stereotassiche avanzate"
+      ]
+    },
+    {
+      "tipo": "titolo",
+      "testo": "Ricerca e Innovazione"
+    },
+    {
+      "tipo": "paragrafo",
+      "testo": "Humanitas è all'avanguardia nella ricerca traslazionale, con laboratori di ricerca che sviluppano nuove strategie terapeutiche. L'istituto partecipa a oltre 300 trial clinici internazionali e ha dato vita a scoperte fondamentali nel campo dell'immunologia dei tumori e delle terapie targeted. La collaborazione con l'Università Humanitas garantisce un continuo scambio tra ricerca e pratica clinica."
+    },
+    {
+      "tipo": "citazione",
+      "testo": "Il nostro obiettivo è trasformare ogni scoperta scientifica in una nuova possibilità di cura per i nostri pazienti, sempre nel rispetto della dignità umana.",
+      "autore": "Prof. Armando Santoro, Direttore Cancer Center"
+    },
+    {
+      "tipo": "titolo",
+      "testo": "Tecnologie all'Avanguardia"
+    },
+    {
+      "tipo": "paragrafo",
+      "testo": "Humanitas investe costantemente in tecnologie innovative: dal robot chirurgico Da Vinci per interventi mininvasivi, ai sistemi di radioterapia IMRT e IGRT di ultima generazione, fino alle apparecchiature per la medicina nucleare teranostica. Il nuovo Centro di Protonterapia, in costruzione, rappresenterà una delle strutture più avanzate al mondo per il trattamento dei tumori pediatrici e dei tumori in sedi critiche."
+    },
+    {
+      "tipo": "titolo",
+      "testo": "Approccio Multidisciplinare"
+    },
+    {
+      "tipo": "paragrafo",
+      "testo": "Ogni paziente di Humanitas beneficia di un approccio multidisciplinare attraverso i Tumor Board, incontri settimanali in cui oncologi medici, chirurghi, radioterapisti e specialisti di diagnostica per immagini discutono collegialmente ogni caso per definire la strategia terapeutica più appropriata. Questo modello garantisce la massima personalizzazione delle cure e l'ottimizzazione dei risultati clinici."
+    }
+  ],
+  "didascalia": "L'Istituto Clinico Humanitas di Rozzano, con il suo Comprehensive Cancer Center e i laboratori di ricerca avanzata, rappresenta un'eccellenza mondiale nella lotta contro il cancro, combinando innovazione scientifica e umanizzazione delle cure.",
+  "flourishEmbed": "https://public.flourish.studio/visualisation/34567890/"
+}

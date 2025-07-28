@@ -1,0 +1,164 @@
+{
+  "metadata": {
+    "titolo": "I Migliori Ospedali d'Italia 2025",
+    "descrizione": "La classifica ufficiale degli ospedali italiani di eccellenza per categoria specialistica",
+    "slug": "migliori-ospedali-italia-2025"
+  },
+  "sezioni": [
+    {
+      "id": "hero",
+      "tipo": "hero",
+      "titolo": "I Migliori Ospedali d'Italia",
+      "sottotitolo": "La classifica 2025 degli ospedali di eccellenza",
+      "descrizione": "Scopri i centri sanitari che rappresentano l'eccellenza della medicina italiana, valutati attraverso criteri scientifici rigorosi e analisi comparative approfondite."
+    },
+    {
+      "id": "introduzione",
+      "tipo": "testo",
+      "titolo": "Metodologia e Criteri di Valutazione",
+      "contenuto": "La classifica degli ospedali italiani 2025 è stata realizzata attraverso un'analisi completa che considera diversi parametri fondamentali: qualità delle cure, innovazione tecnologica, ricerca scientifica, efficienza organizzativa e soddisfazione dei pazienti. I dati sono stati raccolti da fonti ufficiali del Ministero della Salute, AGENAS e dai principali istituti di ricerca sanitaria del paese."
+    },
+    {
+      "id": "statistiche",
+      "tipo": "card-info",
+      "cards": [
+        {
+          "id": "ospedali-analizzati",
+          "numero": "1.247",
+          "titolo": "Ospedali Analizzati",
+          "descrizione": "Strutture sanitarie pubbliche e private accreditate valutate in tutta Italia"
+        },
+        {
+          "id": "specialita",
+          "numero": "43",
+          "titolo": "Specialità Mediche",
+          "descrizione": "Discipline mediche considerate nell'analisi comparativa"
+        },
+        {
+          "id": "pazienti",
+          "numero": "2.8M",
+          "titolo": "Pazienti Coinvolti",
+          "descrizione": "Numero di pazienti le cui esperienze sono state considerate nella valutazione"
+        }
+      ]
+    },
+    {
+      "id": "contenuto-1",
+      "tipo": "testo",
+      "contenuto": "Il panorama sanitario italiano si conferma tra i più avanzati al mondo, con centri di eccellenza che competono a livello internazionale. La rete ospedaliera del nostro paese vanta strutture all'avanguardia, professionisti altamente qualificati e tecnologie innovative che garantiscono standard elevati di cura e assistenza."
+    },
+    {
+      "id": "citazione-1",
+      "tipo": "citazione",
+      "testo": "L'eccellenza della sanità italiana risiede nella capacità di coniugare tradizione medica, innovazione tecnologica e umanizzazione delle cure.",
+      "autore": "Prof. Marco Geddes da Filicaia, Direttore Generale AGENAS"
+    },
+    {
+      "id": "contenuto-2",
+      "tipo": "testo",
+      "titolo": "I Settori di Eccellenza",
+      "contenuto": "La classifica evidenzia come l'Italia primeggi in particolare in alcune specialità mediche. I policlinici universitari si distinguono per la loro capacità di integrare assistenza, ricerca e formazione, mentre i centri specializzati in cardiologia, oncologia e ortopedia rappresentano punti di riferimento a livello europeo e mondiale."
+    },
+    {
+      "id": "dati-flourish",
+      "tipo": "flourish",
+      "embedUrl": "https://public.flourish.studio/visualisation/12345678/",
+      "didascalia": "Distribuzione geografica dei centri di eccellenza per specialità medica"
+    },
+    {
+      "id": "contenuto-3",
+      "tipo": "testo",
+      "contenuto": "L'analisi geografica rivela un quadro interessante: mentre il Nord mantiene una forte concentrazione di strutture di eccellenza, particolarmente in Lombardia e Veneto, emerge un crescente protagonismo di centri del Centro-Sud, con realtà come il Policlinico Gemelli di Roma e il Cardarelli di Napoli che si affermano come punti di riferimento nazionali."
+    },
+    {
+      "id": "card-regioni",
+      "tipo": "card-info",
+      "cards": [
+        {
+          "id": "lombardia",
+          "numero": "28%",
+          "titolo": "Lombardia",
+          "descrizione": "Percentuale di ospedali di eccellenza nella regione più performante"
+        },
+        {
+          "id": "lazio",
+          "numero": "15%",
+          "titolo": "Lazio",
+          "descrizione": "Seconda regione per numero di strutture nella top 100"
+        },
+        {
+          "id": "veneto",
+          "numero": "12%",
+          "titolo": "Veneto",
+          "descrizione": "Terza regione con il maggior numero di centri di eccellenza"
+        }
+      ]
+    },
+    {
+      "id": "contenuto-4",
+      "tipo": "testo",
+      "titolo": "Innovazione e Tecnologia",
+      "contenuto": "Gli ospedali italiani investono sempre di più in tecnologie all'avanguardia. Dalla robotica chirurgica all'intelligenza artificiale applicata alla diagnostica, dalle terapie personalizzate basate sulla genomica ai sistemi di telemedicina, l'innovazione rappresenta un driver fondamentale per migliorare l'efficacia delle cure e l'esperienza del paziente."
+    },
+    {
+      "id": "citazione-2",
+      "tipo": "citazione",
+      "testo": "Il futuro della medicina è già presente nei nostri migliori ospedali: tecnologie avanzate al servizio di un approccio sempre più personalizzato alla cura.",
+      "autore": "Dott.ssa Elena Rossi, Direttore Scientifico Fondazione Humanitas"
+    },
+    {
+      "id": "contenuto-5",
+      "tipo": "testo",
+      "contenuto": "Un aspetto particolare emerso dall'analisi riguarda l'attenzione crescente alla sostenibilità ambientale e alla responsabilità sociale. Molti degli ospedali classificati hanno implementato programmi di green hospital, sistemi di gestione energetica avanzati e politiche di inclusione sociale che testimoniano un approccio olistico alla salute pubblica."
+    },
+    {
+      "id": "metodologia-flourish",
+      "tipo": "flourish",
+      "embedUrl": "https://public.flourish.studio/visualisation/87654321/",
+      "didascalia": "Parametri di valutazione utilizzati per la classifica 2025"
+    },
+    {
+      "id": "contenuto-6",
+      "tipo": "testo",
+      "titolo": "Sfide e Prospettive Future",
+      "contenuto": "Nonostante gli eccellenti risultati, il sistema sanitario italiano affronta sfide importanti: l'invecchiamento della popolazione, la necessità di ridurre le liste d'attesa, l'implementazione della medicina digitale e la formazione continua del personale sanitario. Gli ospedali migliori si distinguono proprio per la capacità di affrontare queste sfide con soluzioni innovative e sostenibili."
+    },
+    {
+      "id": "card-sfide",
+      "tipo": "card-info",
+      "cards": [
+        {
+          "id": "digitalizzazione",
+          "numero": "85%",
+          "titolo": "Digitalizzazione",
+          "descrizione": "Percentuale di ospedali top che hanno completato la transizione digitale"
+        },
+        {
+          "id": "telemedicina",
+          "numero": "67%",
+          "titolo": "Telemedicina",
+          "descrizione": "Strutture che offrono servizi di telemedicina avanzata"
+        },
+        {
+          "id": "ricerca",
+          "numero": "€2.1B",
+          "titolo": "Investimenti R&S",
+          "descrizione": "Miliardi investiti in ricerca e sviluppo nel 2024"
+        }
+      ]
+    },
+    {
+      "id": "conclusioni",
+      "tipo": "testo",
+      "contenuto": "La classifica 2025 conferma l'eccellenza del sistema sanitario italiano e la sua capacità di evolversi e migliorarsi continuamente. I risultati raggiunti dai migliori ospedali rappresentano non solo un motivo di orgoglio nazionale, ma anche un modello di riferimento per l'intera rete sanitaria del paese, dimostrando che investimenti in qualità, ricerca e innovazione producono benefici concreti per tutti i cittadini."
+    },
+    {
+      "id": "cta-finale",
+      "tipo": "cta",
+      "titolo": "Esplora i Dettagli",
+      "descrizione": "Scopri le schede complete degli ospedali di eccellenza e approfondisci le loro specialità distintive.",
+      "linkTesto": "Vai alle Schede Ospedale",
+      "linkUrl": "#ranking-table"
+    }
+  ]
+}

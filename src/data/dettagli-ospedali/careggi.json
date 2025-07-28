@@ -1,0 +1,59 @@
+{
+  "id": "careggi",
+  "titolo": "Azienda Ospedaliero-Universitaria Careggi: Tradizione e Innovazione",
+  "sottotitolo": "Il cuore pulsante della sanità toscana e punto di riferimento nazionale",
+  "contenuto": [
+    {
+      "tipo": "paragrafo",
+      "testo": "L'Azienda Ospedaliero-Universitaria Careggi di Firenze rappresenta una delle realtà sanitarie più importanti e storiche d'Italia. Con una tradizione che affonda le radici nel XIV secolo, Careggi ha saputo evolversi mantenendo la sua vocazione di centro di eccellenza per l'assistenza, la ricerca e la formazione medica, servendo non solo la Toscana ma fungendo da punto di riferimento per tutto il Centro Italia."
+    },
+    {
+      "tipo": "titolo",
+      "testo": "Un Policlinico Universitario di Eccellenza"
+    },
+    {
+      "tipo": "paragrafo",
+      "testo": "Con oltre 1.600 posti letto e una struttura che si estende su un'area di 90 ettari, Careggi è uno dei più grandi policlinici d'Europa. La stretta integrazione con l'Università degli Studi di Firenze garantisce un continuo aggiornamento scientifico e l'applicazione delle più moderne metodologie diagnostiche e terapeutiche."
+    },
+    {
+      "tipo": "lista",
+      "elementi": [
+        "Centro di riferimento regionale per trapianti di organi",
+        "Hub per l'emergenza-urgenza con elisuperficie H24",
+        "Centro di eccellenza per neurochirurgia e neurologia",
+        "Punto di riferimento nazionale per malattie rare"
+      ]
+    },
+    {
+      "tipo": "titolo",
+      "testo": "Innovazione e Ricerca Clinica"
+    },
+    {
+      "tipo": "paragrafo",
+      "testo": "Careggi è protagonista nella ricerca biomedica con diversi dipartimenti di eccellenza. Il Centro di Ricerca Clinica svolge trial internazionali in ambito oncologico, cardiologico e neurologico. L'ospedale è inoltre sede di importanti progetti di ricerca europea nel campo delle malattie rare e della medicina personalizzata."
+    },
+    {
+      "tipo": "citazione",
+      "testo": "Careggi rappresenta il perfetto equilibrio tra tradizione medica e innovazione scientifica, sempre al servizio della comunità.",
+      "autore": "Prof. Rocco Damone, Direttore Generale"
+    },
+    {
+      "tipo": "titolo",
+      "testo": "Specialità di Eccellenza"
+    },
+    {
+      "tipo": "paragrafo",
+      "testo": "Careggi eccelle in numerose specialità: la Neurochirurgia è riconosciuta per gli interventi su tumori cerebrali complessi, la Cardiochirurgia per i trapianti di cuore e gli interventi di chirurgia mini-invasiva, mentre l'Oncologia si distingue per l'approccio multidisciplinare e l'uso di terapie innovative. Il Centro Trapianti è tra i più attivi d'Italia con oltre 300 trapianti l'anno."
+    },
+    {
+      "tipo": "titolo",
+      "testo": "Formazione e Territorio"
+    },
+    {
+      "tipo": "paragrafo",
+      "testo": "Come ospedale universitario, Careggi forma ogni anno centinaia di medici e professionisti sanitari. Le scuole di specializzazione sono tra le più ambite d'Italia, attirando studenti da tutto il paese. L'ospedale mantiene inoltre un forte legame con il territorio toscano, coordinando la rete sanitaria regionale e garantendo servizi specialistici anche nelle aree più periferiche."
+    }
+  ],
+  "didascalia": "L'Azienda Ospedaliero-Universitaria Careggi di Firenze, con i suoi 1.600 posti letto e la sua storia secolare, continua a essere un pilastro della sanità italiana, coniugando tradizione medica e innovazione tecnologica.",
+  "flourishEmbed": "https://public.flourish.studio/visualisation/45678901/"
+}
