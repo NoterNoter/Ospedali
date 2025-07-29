@@ -1,28 +1,15 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import RankingTable from './RankingTable';
 import { getOspedaliData } from '@/lib/data-loader';
 import { LogoBlack } from './Icons';
 
 export default function Header() {
   const ospedaliData = getOspedaliData();
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    if (isModalOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
-  }, [isModalOpen]);
-
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const toggleAccordion = () => setIsOpen(!isOpen);
 
   return (
     <>
@@ -41,7 +28,7 @@ export default function Header() {
           </div>
           
           <button
-            onClick={openModal}
+            onClick={toggleAccordion}
             className="flex items-center gap-2 px-4 py-2 border-l border-black cursor-pointer hover:bg-gray-100 transition-colors"
           >
             CLASSIFICA
@@ -50,7 +37,7 @@ export default function Header() {
               height="12" 
               viewBox="0 0 12 12" 
               fill="none" 
-              className="transition-transform"
+              className={`transition-transform ${isOpen ? 'rotate-180' : ''}`}
             >
               <path 
                 d="M6 8.5L2 4.5L10 4.5L6 8.5Z" 
@@ -61,17 +48,19 @@ export default function Header() {
         </div>
      
       </div>
+      <div 
+        className={`bg-white  transition-all duration-300 ease-in-out overflow-scroll ${
+          isOpen ? 'max-h-screen' : 'max-h-0'
+        }`}
+      >
+        <div className="animate-slide-down">
+          <RankingTable data={ospedaliData} />
+        </div>
+      </div>
+
       </header>
 
-      {isModalOpen && (
-        <div className="fixed left-0 top-6 right-0 z-100 bg-white border-b border-black animate-slide-down">
-          <div className="h-screen flex flex-col">
-            <div className="flex-1 overflow-auto px-0">
-              <RankingTable data={ospedaliData} />
-            </div>
-          </div>
-        </div>
-      )}
+   
      
     </>
   );

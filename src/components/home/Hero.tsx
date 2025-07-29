@@ -5,6 +5,7 @@ import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
 import ScrollDown from "../animations/ScrollDown";
 import { Logo } from "../Icons";
+import SocialShare from "../SocialShare";
 export default function Hero() {
 
 
@@ -44,7 +45,7 @@ export default function Hero() {
       </div>
 
       <div className="flex flex-col gap-2">
-        <p>ciao</p>
+        <SocialShare />
       <div className="flex justify-between py-3 border-t border-blu leading-none">
         <h1 className="text-[9vw] font-medium text-blu">HOSPITAL</h1>
         <h1 className="text-[9vw] font-medium text-outline-blu">AWARD</h1>

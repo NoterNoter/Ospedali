@@ -24,24 +24,24 @@ export default function SocialShare({ url, title, className = "" }: SocialShareP
   }
   
   return (
-    <div className={`flex gap-4 ${className}`}>
+    <div className={`flex gap-2 font-medium ${className}`}>
       <button
         onClick={() => handleShare('facebook')}
-        className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors"
+        className="text-black transition-colors underline"
         aria-label="Share on Facebook"
       >
         FB
       </button>
       <button
         onClick={() => handleShare('x')}
-        className="px-4 py-2 bg-black text-white rounded hover:bg-gray-900 transition-colors"
+        className="text-black transition-colors underline"
         aria-label="Share on X"
       >
         X
       </button>
       <button
         onClick={() => handleShare('linkedin')}
-        className="px-4 py-2 bg-blue-700 text-white rounded hover:bg-blue-800 transition-colors"
+        className="text-black transition-colors underline"
         aria-label="Share on LinkedIn"
       >
         IN

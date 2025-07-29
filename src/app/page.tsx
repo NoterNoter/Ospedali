@@ -34,15 +34,13 @@ export default function Home() {
       <ClassificaRow {...homepageData.classifica_1} />
       <Spacing />
       <ApprofondimentoRow {...homepageData.approfondimento_1} />
-      <TextSection data={homepageData.text_2} />
+      <TextSection no_border data={homepageData.text_2} />
       <ClassificaRow {...homepageData.classifica_2} />
       <Spacing />
       <SectionFlourish data={homepageData.infografica_1} />
       <Spacing />
       
-      <div className="flex justify-center py-8">
-        <SocialShare />
-      </div>
+    
       </div>
 
     </main>

@@ -173,13 +173,15 @@ function RigaTabella({ riga, isEven }: RigaTabellaProps) {
   const contenutoRiga = (
     <>
       {/* Posizione */}
-      <div className="px-2 pl-4 text-center font-bold text-blu h-full flex items-center">
+      <div className="px-2 pl-4 text-center text-blu h-full flex items-center">
         ({posizione})
       </div>
       
       {/* Nome ospedale */}
       <div className="px-2 border-l border-black h-full flex items-center">
-        <div className="font-semibold text-black text-sm leading-tight">
+        <div className={`font-semibold text-sm leading-tight ${
+          ospedale.hasDetailPage ? 'text-blu underline' : 'text-black'
+        }`}>
           {ospedale.nome}
         </div>
       </div>
