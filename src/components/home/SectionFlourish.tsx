@@ -20,28 +20,30 @@ export default function SectionFlourish({ data }: SectionFlourishProps) {
         </div>
 
         {/* lista valori */}
-        <div className="mt-6">
-          <h3 className="text-xs font-semibold mb-2 text-black leading-tight">
-            {data.titolo_classifica}
-          </h3>
-          {data.valori.map((row) => (
-            <div key={row.id} className="space-y-2">
-              {row.valore.map((ospedale) => (
-                <div key={ospedale.id} className="flex flex-col items-start gap-2 text-xs">
-                  <div className="  text-[12px] uppercase tracking-wide border-y border-black py-1 w-full">
-                   <strong>{ospedale.numero}.{ospedale.regione}</strong>
-                   /{ospedale.città}
-                  </div>
-                  <div className="flex-1">               
-                    <div className="font-semibold text-black text-xs leading-tight">
-                      {ospedale.titolo}
+        {data.valori && data.valori.length > 0 && (
+          <div className="mt-6">
+            <h3 className="text-xs font-semibold mb-2 text-black leading-tight">
+              {data.titolo_classifica}
+            </h3>
+            {data.valori.map((row) => (
+              <div key={row.id} className="space-y-2">
+                {row.valore && row.valore.map((ospedale) => (
+                  <div key={ospedale.id} className="flex flex-col items-start gap-2 text-xs">
+                    <div className="  text-[12px] uppercase tracking-wide border-y border-black py-1 w-full">
+                     <strong>{ospedale.numero}.{ospedale.regione}</strong>
+                     /{ospedale.città}
+                    </div>
+                    <div className="flex-1">               
+                      <div className="font-semibold text-black text-xs leading-tight">
+                        {ospedale.titolo}
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        )}
 
       </div>
       <div className="col-span-4 col-start-2">

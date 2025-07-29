@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import RankingTable from './RankingTable';
 import { getOspedaliData } from '@/lib/data-loader';
 import { LogoBlack } from './Icons';
+import Link from 'next/link';
 
 export default function Header() {
   const ospedaliData = getOspedaliData();
@@ -17,9 +18,9 @@ export default function Header() {
         <div className='relative'>
         <div className="grid grid-cols-5">
 
-          <div className="text-sm uppercase flex items-center font-semibold col-span-1 border-r border-black pl-4 pr-2 leading-none">
+          <Link href="/" className="text-sm uppercase flex items-center font-semibold col-span-1 border-r border-black pl-4 pr-2 leading-none">
             Best Italian Hospital award
-          </div>
+          </Link>
 
           <div className="col-span-3 flex justify-center items-center">
             <a href="/" className="w-13 ">

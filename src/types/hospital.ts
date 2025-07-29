@@ -102,6 +102,7 @@ export interface DettaglioOspedale {
   contenuto: ContenutoItem[];
   didascalia: string;
   flourishEmbed: string;
+  infografica?: InfograficaData;
 }
 
 // Tipi per la homepage

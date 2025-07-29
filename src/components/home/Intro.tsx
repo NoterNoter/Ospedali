@@ -1,6 +1,7 @@
 import React from 'react'
 import CardInfo from './CardInfo'
 import { ArrowSquare } from '../Icons'
+import TextReveal from '../animations/TextReveal'
 export default function Intro({intro}: {intro: any}) {
   return (
     <section className='grid grid-cols-5 mt-[300px]'>
@@ -14,7 +15,9 @@ export default function Intro({intro}: {intro: any}) {
         </div>
       </div>
       <div className="col-span-3 bg-gray  border-r p-2 flex flex-col justify-between">
+        <TextReveal>
         <h1 className='text-lg font-semibold leading-tight mb-10'>{intro.titolo}</h1>
+        </TextReveal>
         <div className='flex justify-between'>
           <div className='text-sm text-black'>
           DI <br />

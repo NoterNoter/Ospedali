@@ -205,9 +205,12 @@ html {
   }
 }
 
+.split-line-word {
+  overflow: hidden;
+  line-height: 1;
+}
 
 .split-line-custom {
-  display: inline-block;
   clip-path: inset(-20% -20% -10% -20%);
   opacity: 0;
   transform: translateY(40%);

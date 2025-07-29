@@ -23,7 +23,8 @@ const TextReveal = ({children, duration = 1, stagger = 0.01, delay = 0} : {child
 
     const split2 = SplitText.create(titleRef.current, { 
       type: "line,words,chars",
-      charsClass: "split-line-custom"
+      charsClass: "split-line-custom",
+      wordsClass: "split-line-word"
     });
     const chars = split2.chars;
 

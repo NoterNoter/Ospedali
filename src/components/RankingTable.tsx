@@ -168,7 +168,6 @@ interface RigaTabellaProps {
 function RigaTabella({ riga, isEven }: RigaTabellaProps) {
   const { posizione, ospedale, punteggio, variazione, cittaRegione } = riga;
   const variazioneText = formatVariazione(variazione);
-  const variazioneColorClass = getVariazioneColorClass(variazione);
 
   const contenutoRiga = (
     <>
@@ -200,7 +199,19 @@ function RigaTabella({ riga, isEven }: RigaTabellaProps) {
       
       {/* Variazione */}
       <div className="px-2 border-l border-black h-full flex items-center">
-        <span className={`font-semibold ${variazioneColorClass}`}>
+        <span className="font-semibold flex items-center gap-1">
+          {variazione !== 0 && (
+            <svg 
+              width="10" 
+              height="6" 
+              viewBox="0 0 10 6" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg"
+              className={variazione > 0 ? 'rotate-180' : ''}
+            >
+              <path d="M5 5.33334L0 0.333336H10L5 5.33334Z" fill="black"/>
+            </svg>
+          )}
           {variazioneText}
         </span>
       </div>

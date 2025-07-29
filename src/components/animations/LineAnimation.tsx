@@ -1,6 +1,12 @@
+// @ts-nocheck
+"use client"
 import React, { useRef } from 'react'
 import { useGSAP } from '@gsap/react'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
+import { gsap } from "gsap";
+if (typeof window !== "undefined"){
+  gsap.registerPlugin(ScrollTrigger)
+}
 
 interface LineAnimationProps {
   color?: string
@@ -23,7 +29,6 @@ export default function LineAnimation({
 
   useGSAP(() => {
     // Register ScrollTrigger plugin
-    gsap.registerPlugin(ScrollTrigger)
 
     if (lineRef.current) {
       // Set initial state

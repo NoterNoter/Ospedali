@@ -9,7 +9,9 @@ import SocialShare from "@/components/SocialShare";
 import SectionFlourish from "@/components/home/SectionFlourish";
 import Header from "@/components/Header";
 import FlourishEmbed from "@/components/FlourishEmbed";
+import ExpandableArticle from "@/components/ExpandableArticle";
 import { ArrowSquare } from "@/components/Icons";
+import Image from "next/image";
 
 interface OspedalePageProps {
   params: Promise<{
@@ -77,22 +79,31 @@ export default async function OspedalePage({ params }: OspedalePageProps) {
       </div>
 
       {/* Contenuto principale */}
-      <article className="grid grid-cols-5 border-b border-black">
-        <div className="col-span-1"></div>
-        <div className="col-span-3 border-x border-black py-2 px-2">
-          <div
-            className="text-base text-container"
-            dangerouslySetInnerHTML={{ __html: (dettaglio.contenuto[0] as any).testo }}
-          />
-        </div>
-      </article>
+      <ExpandableArticle content={(dettaglio.contenuto[0] as any).testo} />
 
-      {/* Embed Flourish */}
-      {dettaglio.flourishEmbed && (
-        <div className="mb-16">
-          <FlourishEmbed embedUrl={dettaglio.flourishEmbed} />
+      <div className="grid grid-cols-5 ">
+        <div className="col-span-1"></div>
+      {/* Immagine ospedale in aspect-ratio video, fullscreen */}
+      {dettaglio.immagine && (
+        <div className="col-span-3 w-full border-x border-black">
+          <div className="relative w-full aspect-video">
+            <Image
+              src={dettaglio.immagine}
+              alt={dettaglio.titolo}
+              fill
+              className="object-cover"
+              style={{ objectPosition: "center" }}
+              sizes="100vw"
+              priority
+            />
+          </div>
         </div>
       )}
+      </div>
+
+      <SectionFlourish data={dettaglio.infografica as any} />
+
+     
     </main>
   );
 }

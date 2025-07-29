@@ -1,5 +1,5 @@
 import React from "react";
-
+import LineAnimation from "../animations/LineAnimation";
 interface CardClassificaProps {
   card: {
     numero: string;
@@ -24,7 +24,8 @@ export default function CardClassifica({ card }: CardClassificaProps) {
     <div
       className={`${getBackgroundClass()} text-white flex flex-col p-2 justify-between min-h-[400px]`}
     >
-      <div className="text-sm  border-b border-white pb-2">
+      <div className="text-sm  pb-2 relative">
+        <LineAnimation color="white" className="absolute bottom-0 left-0 " />
         <div className="font-semibold h-6 w-6 bg-white text-blu rounded-full flex items-center justify-center text-md-2">
           {card.numero}
         </div>
