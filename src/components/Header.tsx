@@ -29,7 +29,7 @@ export default function Header() {
             
             <button
               onClick={toggleAccordion}
-              className="flex items-center gap-2 px-4 py-2  cursor-pointer hover:bg-gray-100 transition-colors"
+              className="flex items-center gap-2 pl-2 py-2  cursor-pointer hover:bg-gray-100 transition-colors"
             >
               CLASSIFICA
               <svg 
@@ -47,10 +47,9 @@ export default function Header() {
             </button>
           </div>
         </div>
-      </header>
-
-      <div 
-        className={`bg-white transition-all duration-300 ease-in-out overflow-hidden ${
+        <div 
+        data-lenis-prevent
+        className={`bg-white transition-all duration-300 ease-in-out overflow-scroll ${
           isOpen ? 'max-h-[2000px]' : 'max-h-0'
         }`}
       >
@@ -58,6 +57,9 @@ export default function Header() {
           <RankingTable data={ospedaliData} />
         </div>
       </div>
+      </header>
+
+      
     </>
 
    
