@@ -1,59 +1,19 @@
 {
   "id": "san-raffaele",
-  "titolo": "IRCCS Ospedale San Raffaele: Pioniere dell'Innovazione Medica",
-  "sottotitolo": "Dove ricerca scientifica e cura del paziente si incontrano",
+  "titolo": "IRCCS San Raffaele: Un'esperienza medica unica, con i migliori specialisti e tecnologie all'avanguardia",
+  "sottotitolo": "Un'esperienza medica unica, con i migliori specialisti e tecnologie all'avanguardia",
+  "regione": "Lombardia",
+  "citta": "Milano",
+  "immagine": "/immagini/san-raffaele.jpg",
   "contenuto": [
     {
       "tipo": "paragrafo",
-      "testo": "L'IRCCS Ospedale San Raffaele di Milano rappresenta uno dei centri di eccellenza più prestigiosi nel panorama sanitario internazionale. Fondato nel 1971 dall'intuizione di Don Luigi Maria Verzé, il San Raffaele ha saputo coniugare fin dalle origini assistenza clinica di altissimo livello, ricerca scientifica d'avanguardia e formazione medica specialistica."
-    },
-    {
-      "tipo": "titolo",
-      "testo": "Un Modello Unico di Integrazione"
-    },
-    {
-      "tipo": "paragrafo",
-      "testo": "Il San Raffaele si distingue per il suo modello organizzativo unico che integra tre anime fondamentali: l'ospedale, l'università e l'istituto di ricerca. Questa sinergia permette di trasferire rapidamente le scoperte scientifiche dalla ricerca di base alla pratica clinica, offrendo ai pazienti terapie innovative spesso non disponibili altrove."
-    },
-    {
-      "tipo": "lista",
-      "elementi": [
-        "Oltre 1.400 posti letto distribuiti in diverse specialità",
-        "Più di 4.500 professionisti tra medici, ricercatori e personale sanitario",
-        "Centro di riferimento nazionale per trapianti e terapie cellulari",
-        "Hub europeo per la ricerca oncologica e neurologica"
-      ]
-    },
-    {
-      "tipo": "titolo",
-      "testo": "Eccellenze Cliniche e Scientifiche"
-    },
-    {
-      "tipo": "paragrafo",
-      "testo": "Il San Raffaele è riconosciuto a livello mondiale per le sue eccellenze in cardiologia e cardiochirurgia, con il Centro Cardiologico Monzino che rappresenta un punto di riferimento internazionale. L'Istituto di Neurologia sperimentale sviluppa terapie innovative per malattie neurodegenerative, mentre l'Istituto di Medicina Molecolare è all'avanguardia nella ricerca genetica e nella medicina personalizzata."
-    },
-    {
-      "tipo": "citazione",
-      "testo": "La nostra missione è trasformare la ricerca scientifica in speranza concreta per i pazienti, mantenendo sempre l'umanità al centro del nostro operato.",
-      "autore": "Prof. Fabio Ciceri, Direttore Scientifico"
-    },
-    {
-      "tipo": "titolo",
-      "testo": "Innovazione Tecnologica"
-    },
-    {
-      "tipo": "paragrafo",
-      "testo": "Il San Raffaele investe costantemente in tecnologie all'avanguardia. Il nuovo Centro di Radioterapia Oncologica è dotato dei più moderni acceleratori lineari, mentre i laboratori di ricerca utilizzano tecnologie di sequenziamento genomico di ultima generazione. La digitalizzazione completa dei processi clinici garantisce efficienza e sicurezza nelle cure."
-    },
-    {
-      "tipo": "titolo",
-      "testo": "Ricerca e Sviluppo"
-    },
-    {
-      "tipo": "paragrafo",
-      "testo": "Con oltre 2.000 pubblicazioni scientifiche all'anno e numerose sperimentazioni cliniche internazionali, il San Raffaele è protagonista nella ricerca biomedica mondiale. I suoi ricercatori hanno contribuito allo sviluppo di terapie geniche innovative, protocolli di trapianto pioneristici e approcci terapeutici personalizzati che stanno rivoluzionando la medicina moderna."
+      "testo": "<p><strong>I Migliori Ospedali d'Italia 2025 </strong> Nibh feugiat metus vel nunc faucibus dignissim mollis vel platea. Nec cras dignissim rutrum augue tristique id. Mauris ullamcorper non nibh in convallis non molestie tincidunt. Sed commodo gravida laoreet iaculis iaculis. Ipsum diam massa fusce sollicitudin blandit ut. Ut interdum orci morbi mauris id faucibus quam.</p><p>Ligula pretium et ac justo nulla pulvinar at fermentum arcu. Nibh eu posuere euismod nisi erat arcu purus. Porttitor tempus sapien scelerisque risus tristique. Maecenas et id eget id consectetur morbi malesuada ut. Euismod elit etiam porttitor consectetur etiam lorem vulputate netus quis. Ullamcorper proin semper vulputate turpis. Rhoncus semper eu viverra velit imperdiet leo duis venenatis pretium. Massa id at vitae eros. Et in id vulputate nec quis enim porttitor. Lobortis enim porttitor laoreet id cum elementum in amet sed. Eget sed morbi ac et risus morbi elementum cursus gravida.</p><p>Nibh feugiat metus vel nunc faucibus dignissim mollis vel platea. Nec cras dignissim rutrum augue tristique id. Mauris ullamcorper non nibh in convallis non molestie tincidunt. Sed commodo gravida laoreet iaculis iaculis. Ipsum diam massa fusce sollicitudin blandit ut. Ut interdum orci morbi mauris id faucibus quam.</p><p>Ligula pretium et ac justo nulla pulvinar at fermentum arcu. Nibh eu posuere euismod nisi erat arcu purus. Porttitor tempus sapien scelerisque risus tristique. Maecenas et id eget id consectetur morbi malesuada ut. Euismod elit etiam porttitor consectetur etiam lorem vulputate netus quis. Ullamcorper proin semper vulputate turpis. Rhoncus semper eu viverra velit imperdiet leo duis venenatis pretium. Massa id at vitae eros. Et in id vulputate nec quis enim porttitor. Lobortis enim porttitor laoreet id cum elementum in amet sed. Eget sed morbi ac et risus morbi elementum cursus gravida.</p>"
     }
   ],
-  "didascalia": "L'IRCCS Ospedale San Raffaele di Milano, con i suoi tre istituti di ricerca e l'università Vita-Salute, rappresenta un modello unico di integrazione tra assistenza, ricerca e formazione nel panorama sanitario internazionale.",
-  "flourishEmbed": "https://public.flourish.studio/visualisation/23456789/"
+  "infografica": {
+    "titolo": "Arcu massa curabitur aliquet lacus. Mi dictum nulla pretium arcu. Rhoncus fames sagittis leo etiam.",
+    "descrizione": "Massa sit bibendum bibendum sociis dictum lorem morbi vel. Odio semper lobortis justo eu in.",
+    "flourish": "https://public.flourish.studio/visualisation/14410013/"
+  }
 }

@@ -96,6 +96,9 @@ export interface DettaglioOspedale {
   id: string;
   titolo: string;
   sottotitolo: string;
+  regione: string;
+  citta: string;
+  immagine?: string;
   contenuto: ContenutoItem[];
   didascalia: string;
   flourishEmbed: string;

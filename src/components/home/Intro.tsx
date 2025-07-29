@@ -9,7 +9,7 @@ export default function Intro({intro}: {intro: any}) {
       </div>
       <div className="col-start-1 relative">
         <CardInfo card={intro.card} />
-        <div className="absolute h-6 w-6 border-b border-l border-black bottom-[-60px] right-0 flex items-center justify-center">
+        <div className="absolute h-[50px] w-[50px] border-b border-l border-black bottom-[-50px] right-0 flex items-center justify-center">
           <ArrowSquare />
         </div>
       </div>

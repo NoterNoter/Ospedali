@@ -1,8 +1,15 @@
-import { notFound } from 'next/navigation';
-import Link from 'next/link';
-import { getDettaglioOspedale, getOspedaliConDettaglioIds } from '@/lib/data-loader';
-import RichTextRenderer from '@/components/RichTextRenderer';
-import FlourishEmbed from '@/components/FlourishEmbed';
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import {
+  getDettaglioOspedale,
+  getOspedaliConDettaglioIds,
+} from "@/lib/data-loader";
+import RichTextRenderer from "@/components/RichTextRenderer";
+import SocialShare from "@/components/SocialShare";
+import SectionFlourish from "@/components/home/SectionFlourish";
+import Header from "@/components/Header";
+import FlourishEmbed from "@/components/FlourishEmbed";
+import { ArrowSquare } from "@/components/Icons";
 
 interface OspedalePageProps {
   params: Promise<{
@@ -13,68 +20,79 @@ interface OspedalePageProps {
 export default async function OspedalePage({ params }: OspedalePageProps) {
   const { id } = await params;
   const dettaglio = await getDettaglioOspedale(id);
-  
+
   if (!dettaglio) {
     notFound();
   }
 
   return (
-    <main className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="bg-gradient-to-br from-blue-900 to-blue-700 text-white py-16 px-6">
-        <div className="max-w-4xl mx-auto">
-          <nav className="mb-8">
-            <Link 
-              href="/#ranking-table"
-              className="inline-flex items-center text-blue-200 hover:text-white transition-colors"
+    <main className="min-h-screen bg-gray">
+      <Header />
+
+      <div className="grid grid-cols-5 border-b border-black">
+        <div className="col-span-1 pl-4 p-2">
+          <span className="text-sm uppercase font-semibold text-black/40 flex items-center gap-2">
+            <span
+              aria-hidden="true"
+              className="inline-block text-black/40 text-lg"
             >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10.4766 7.83341L0.33366 7.83341V6.16675L10.4766 6.16675L6.00666 1.69678L7.18516 0.518264L13.667 7.00008L7.18516 13.4819L6.00666 12.3034L10.4766 7.83341Z"
+                  fill="black"
+                  fillOpacity="0.4"
+                />
               </svg>
-              Torna alla classifica
-            </Link>
-          </nav>
-          
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
+            </span>
+            APPROFONDIMENTO
+          </span>
+        </div>
+
+        <div className="col-span-3 h-[180px] text-md font-medium py-2 px-2 border-x border-black leading-tight">
+          <h2 className="max-w-[500px]">{dettaglio.sottotitolo}</h2>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-5 border-b border-black  relative">
+        <div className="col-span-1 pl-4 p-2 relative">
+          <SocialShare />
+          <div className="absolute h-[50px] w-[50px] border-b border-l border-black bottom-[-50px] right-0 flex items-center justify-center">
+            <ArrowSquare />
+          </div>
+        </div>
+        <div className="col-span-3 bg-white border-x border-black py-2 px-2 leading-tight relative">
+          <div className="flex absolute top-2 right-2 text-sm uppercase ">
+            {dettaglio.regione} /<strong> {dettaglio.citta}</strong>
+          </div>
+          <h1 className="text-lg max-w-[700px] font-medium mb-4 leading-tight">
             {dettaglio.titolo}
           </h1>
-          <h2 className="text-xl md:text-2xl font-light opacity-90">
-            {dettaglio.sottotitolo}
-          </h2>
         </div>
-      </header>
+      </div>
 
       {/* Contenuto principale */}
-      <article className="py-16 px-6">
-        <div className="max-w-4xl mx-auto">
-          <RichTextRenderer 
-            contenuto={dettaglio.contenuto}
-            className="mb-16"
+      <article className="grid grid-cols-5 border-b border-black">
+        <div className="col-span-1"></div>
+        <div className="col-span-3 border-x border-black py-2 px-2">
+          <div
+            className="text-base text-container"
+            dangerouslySetInnerHTML={{ __html: (dettaglio.contenuto[0] as any).testo }}
           />
-          
-          {/* Embed Flourish */}
-          {dettaglio.flourishEmbed && (
-            <div className="mb-16">
-              <FlourishEmbed 
-                embedUrl={dettaglio.flourishEmbed}
-                didascalia={dettaglio.didascalia}
-              />
-            </div>
-          )}
         </div>
       </article>
 
-      {/* Footer con link di ritorno */}
-      <footer className="bg-gray-50 py-12 px-6">
-        <div className="max-w-4xl mx-auto text-center">
-          <Link 
-            href="/#ranking-table"
-            className="inline-block bg-blue-900 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-800 transition-colors shadow-lg"
-          >
-            Esplora altri ospedali
-          </Link>
+      {/* Embed Flourish */}
+      {dettaglio.flourishEmbed && (
+        <div className="mb-16">
+          <FlourishEmbed embedUrl={dettaglio.flourishEmbed} />
         </div>
-      </footer>
+      )}
     </main>
   );
 }
@@ -82,7 +100,7 @@ export default async function OspedalePage({ params }: OspedalePageProps) {
 // Genera le route statiche per tutti gli ospedali con dettaglio
 export async function generateStaticParams() {
   const ospedaliIds = getOspedaliConDettaglioIds();
-  
+
   return ospedaliIds.map((id) => ({
     id,
   }));
@@ -92,10 +110,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: OspedalePageProps) {
   const { id } = await params;
   const dettaglio = await getDettaglioOspedale(id);
-  
+
   if (!dettaglio) {
     return {
-      title: 'Ospedale non trovato',
+      title: "Ospedale non trovato",
     };
   }
 

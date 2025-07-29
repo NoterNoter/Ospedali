@@ -1,67 +1,19 @@
 {
   "id": "policlinico-gemelli",
-  "titolo": "Policlinico Universitario A. Gemelli: Eccellenza della Sanità Italiana",
-  "sottotitolo": "Un centro di riferimento internazionale per la cura e la ricerca",
+  "titolo": "Policlinico Universitario A. Gemelli: Un'esperienza medica unica, con i migliori specialisti e tecnologie all'avanguardia",
+  "sottotitolo": "Un'esperienza medica unica, con i migliori specialisti e tecnologie all'avanguardia",
+  "regione": "Lombardia",
+  "citta": "Roma",
+  "immagine": "/immagini/policlinico-gemelli.jpg",
   "contenuto": [
     {
       "tipo": "paragrafo",
-      "testo": "Il Policlinico Universitario Agostino Gemelli IRCCS rappresenta uno dei centri di eccellenza più importanti del panorama sanitario italiano ed europeo. Situato a Roma, questo ospedale universitario combina assistenza sanitaria di altissimo livello, ricerca scientifica all'avanguardia e formazione medica di qualità."
-    },
-    {
-      "tipo": "titolo",
-      "testo": "Storia e Missione"
-    },
-    {
-      "tipo": "paragrafo",
-      "testo": "Fondato nel 1964, il Gemelli è nato dalla visione di Padre Agostino Gemelli e si è rapidamente affermato come punto di riferimento per la sanità italiana. La struttura, che fa parte della Fondazione Policlinico Universitario Agostino Gemelli IRCCS, ospita oltre 1.500 posti letto e impiega più di 5.000 professionisti tra medici, infermieri e personale tecnico."
-    },
-    {
-      "tipo": "titolo",
-      "testo": "Eccellenze Cliniche"
-    },
-    {
-      "tipo": "paragrafo",
-      "testo": "Il Policlinico Gemelli si distingue per l'eccellenza in numerose specialità mediche. Il Centro di Oncologia è riconosciuto a livello internazionale per i trattamenti innovativi e la ricerca clinica. La Cardiologia e Cardiochirurgia del Gemelli sono all'avanguardia nelle procedure interventistiche e nella gestione delle patologie cardiovascolari complesse."
-    },
-    {
-      "tipo": "lista",
-      "elementi": [
-        "Centro Oncologico di riferimento nazionale con oltre 15.000 pazienti l'anno",
-        "Dipartimento di Neuroscienze leader nella neurochirurgia mininvasiva",
-        "Centro Trapianti tra i più attivi d'Italia",
-        "Pronto Soccorso DEA di II livello con oltre 80.000 accessi annui"
-      ]
-    },
-    {
-      "tipo": "titolo",
-      "testo": "Innovazione e Ricerca"
-    },
-    {
-      "tipo": "paragrafo",
-      "testo": "Come IRCCS (Istituto di Ricovero e Cura a Carattere Scientifico), il Gemelli è protagonista nella ricerca biomedica. I suoi laboratori producono centinaia di pubblicazioni scientifiche ogni anno e partecipano a trial clinici internazionali. L'innovazione tecnologica è un pilastro fondamentale, con investimenti continui in apparecchiature all'avanguardia come robot chirurgici, acceleratori lineari di ultima generazione e sistemi di imaging avanzati."
-    },
-    {
-      "tipo": "citazione",
-      "testo": "La nostra missione è coniugare l'eccellenza clinica con l'umanizzazione delle cure, mettendo sempre il paziente al centro del nostro operato.",
-      "autore": "Prof. Marco Elefanti, Direttore Generale"
-    },
-    {
-      "tipo": "titolo",
-      "testo": "Formazione e Università"
-    },
-    {
-      "tipo": "paragrafo",
-      "testo": "In quanto policlinico universitario dell'Università Cattolica del Sacro Cuore, il Gemelli forma ogni anno migliaia di studenti di medicina, specializzandi e professionisti sanitari. La Facoltà di Medicina e Chirurgia è considerata tra le migliori d'Italia, attirando studenti da tutto il mondo."
-    },
-    {
-      "tipo": "titolo",
-      "testo": "Verso il Futuro"
-    },
-    {
-      "tipo": "paragrafo",
-      "testo": "Il Policlinico Gemelli continua a investire nel futuro della sanità. I progetti in corso includono l'espansione delle strutture, l'implementazione di nuove tecnologie digitali per la telemedicina e l'intelligenza artificiale applicata alla diagnostica. L'obiettivo è mantenere e rafforzare la posizione di leadership nell'assistenza sanitaria, continuando a offrire cure di eccellenza a tutti i pazienti."
+      "testo": "<p><strong>I Migliori Ospedali d'Italia 2025 </strong> Nibh feugiat metus vel nunc faucibus dignissim mollis vel platea. Nec cras dignissim rutrum augue tristique id. Mauris ullamcorper non nibh in convallis non molestie tincidunt. Sed commodo gravida laoreet iaculis iaculis. Ipsum diam massa fusce sollicitudin blandit ut. Ut interdum orci morbi mauris id faucibus quam.</p><p>Ligula pretium et ac justo nulla pulvinar at fermentum arcu. Nibh eu posuere euismod nisi erat arcu purus. Porttitor tempus sapien scelerisque risus tristique. Maecenas et id eget id consectetur morbi malesuada ut. Euismod elit etiam porttitor consectetur etiam lorem vulputate netus quis. Ullamcorper proin semper vulputate turpis. Rhoncus semper eu viverra velit imperdiet leo duis venenatis pretium. Massa id at vitae eros. Et in id vulputate nec quis enim porttitor. Lobortis enim porttitor laoreet id cum elementum in amet sed. Eget sed morbi ac et risus morbi elementum cursus gravida.</p><p>Nibh feugiat metus vel nunc faucibus dignissim mollis vel platea. Nec cras dignissim rutrum augue tristique id. Mauris ullamcorper non nibh in convallis non molestie tincidunt. Sed commodo gravida laoreet iaculis iaculis. Ipsum diam massa fusce sollicitudin blandit ut. Ut interdum orci morbi mauris id faucibus quam.</p><p>Ligula pretium et ac justo nulla pulvinar at fermentum arcu. Nibh eu posuere euismod nisi erat arcu purus. Porttitor tempus sapien scelerisque risus tristique. Maecenas et id eget id consectetur morbi malesuada ut. Euismod elit etiam porttitor consectetur etiam lorem vulputate netus quis. Ullamcorper proin semper vulputate turpis. Rhoncus semper eu viverra velit imperdiet leo duis venenatis pretium. Massa id at vitae eros. Et in id vulputate nec quis enim porttitor. Lobortis enim porttitor laoreet id cum elementum in amet sed. Eget sed morbi ac et risus morbi elementum cursus gravida.</p>"
     }
   ],
-  "didascalia": "Il Policlinico Universitario A. Gemelli IRCCS di Roma, con i suoi 1.500 posti letto e oltre 5.000 professionisti, rappresenta uno dei centri sanitari più grandi e avanzati d'Europa.",
-  "flourishEmbed": "https://public.flourish.studio/visualisation/12345678/"
+  "infografica": {
+    "titolo": "Arcu massa curabitur aliquet lacus. Mi dictum nulla pretium arcu. Rhoncus fames sagittis leo etiam.",
+    "descrizione": "Massa sit bibendum bibendum sociis dictum lorem morbi vel. Odio semper lobortis justo eu in.",
+    "flourish": "https://public.flourish.studio/visualisation/14410013/"
+  }
 }
