@@ -4,7 +4,6 @@ import {
   getDettaglioOspedale,
   getOspedaliConDettaglioIds,
 } from "@/lib/data-loader";
-import RichTextRenderer from "@/components/RichTextRenderer";
 import SocialShare from "@/components/SocialShare";
 import SectionFlourish from "@/components/home/SectionFlourish";
 import Header from "@/components/Header";
@@ -12,6 +11,7 @@ import FlourishEmbed from "@/components/FlourishEmbed";
 import ExpandableArticle from "@/components/ExpandableArticle";
 import { ArrowSquare } from "@/components/Icons";
 import Image from "next/image";
+import TextReveal from "@/components/animations/TextReveal";
 
 interface OspedalePageProps {
   params: Promise<{
@@ -72,9 +72,11 @@ export default async function OspedalePage({ params }: OspedalePageProps) {
           <div className="flex absolute top-2 right-2 text-sm uppercase ">
             {dettaglio.regione} /<strong> {dettaglio.citta}</strong>
           </div>
-          <h1 className="text-lg max-w-[700px] font-medium mb-4 leading-tight">
-            {dettaglio.titolo}
-          </h1>
+          <TextReveal>
+            <h1 className="text-lg max-w-[700px] font-medium mb-4 leading-none">
+              {dettaglio.titolo}
+            </h1>
+          </TextReveal>
         </div>
       </div>
 

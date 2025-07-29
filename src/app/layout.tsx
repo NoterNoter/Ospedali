@@ -5,6 +5,8 @@ import VerticalLines from "@/components/VerticalLines";
 import LenisScrollProvider from "./providers/lenis-provider";
 import localFont from 'next/font/local';
 import Header from "@/components/Header";
+import PageTransition from "@/components/PageTransition";
+import { PageTransitionProvider } from "@/contexts/PageTransitionContext";
 
 
 const sans = localFont({
@@ -58,9 +60,15 @@ export default function RootLayout({
         className={`${sans.variable} antialiased`}
       >
           <VerticalLines />
-          <div className="max-w-[1440px] mx-auto relative z-10">
-            {children}
-          </div>
+          <PageTransitionProvider>
+            <LenisScrollProvider>
+              <PageTransition>
+                <div className="max-w-[1440px] mx-auto relative z-10">
+                  {children}
+                </div>
+              </PageTransition>
+            </LenisScrollProvider>
+          </PageTransitionProvider>
       </body>
     </html>
   );

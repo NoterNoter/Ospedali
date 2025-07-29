@@ -207,7 +207,7 @@ html {
 
 .split-line-word {
   overflow: hidden;
-  line-height: 1;
+  line-height: 1.15;
 }
 
 .split-line-custom {
@@ -248,4 +248,32 @@ html {
 }
 .text-container strong{
  display: inline-block;
+}
+
+/* Hover slide background animation */
+.hover-slide-bg {
+  position: relative;
+}
+
+.hover-slide-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(1, 1, 161, 0.1);
+  transform: translateY(100%);
+  transition: transform 0.3s ease-out;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hover-slide-bg:hover::before {
+  transform: translateY(0);
+}
+
+.hover-slide-bg > * {
+  position: relative;
+  z-index: 1;
 }

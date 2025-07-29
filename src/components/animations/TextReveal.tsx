@@ -1,12 +1,13 @@
 // @ts-nocheck
 "use client"
-import React, { useRef} from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { useGSAP } from '@gsap/react';
 import { gsap } from "gsap";
 import { SplitText } from "gsap/dist/SplitText.js";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger.js";
 import { CustomEase } from "gsap/dist/CustomEase.js";
 import { PrismicRichText } from "@/components/PrismicRichText";
+import { usePageTransition } from '@/contexts/PageTransitionContext';
 
 if (typeof window !== "undefined"){
   gsap.registerPlugin(SplitText)
@@ -17,9 +18,21 @@ if (typeof window !== "undefined"){
 const TextReveal = ({children, duration = 1, stagger = 0.01, delay = 0} : {children: React.ReactNode, duration?: number, stagger?: number, delay?: number}) => {
 
   const titleRef = useRef<HTMLSpanElement>(null); 
+  const { isTransitioning } = usePageTransition();
+  const [shouldAnimate, setShouldAnimate] = useState(false);
+
+  useEffect(() => {
+    if (!isTransitioning) {
+      // Wait a bit after transition ends before animating
+      const timer = setTimeout(() => {
+        setShouldAnimate(true);
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [isTransitioning]);
 
   useGSAP(() => {
-    if (!titleRef.current) return;
+    if (!titleRef.current || !shouldAnimate) return;
 
     const split2 = SplitText.create(titleRef.current, { 
       type: "line,words,chars",
@@ -62,7 +75,7 @@ const TextReveal = ({children, duration = 1, stagger = 0.01, delay = 0} : {child
       st.kill();
       split2.revert();
     };
-  }, { dependencies: [], scope: titleRef });
+  }, { dependencies: [shouldAnimate], scope: titleRef });
 
   return (
     <span ref={titleRef}>

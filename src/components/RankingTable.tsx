@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   CategoriaId, 
   OspedaliData,
@@ -147,15 +148,23 @@ export default function RankingTable({ data, className = '' }: RankingTableProps
       </div>
 
       {/* Corpo della tabella */}
-      <div className="bg-white">
-        {righeOrdinate.map((riga, index) => (
-          <RigaTabella 
-            key={riga.ospedale.id}
-            riga={riga}
-            isEven={index % 2 === 0}
-          />
-        ))}
-      </div>
+      <motion.div 
+        className="bg-white"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.3 }}
+      >
+        <AnimatePresence>
+          {righeOrdinate.map((riga, index) => (
+            <RigaTabella 
+              key={riga.ospedale.id}
+              riga={riga}
+              isEven={index % 2 === 0}
+              index={index}
+            />
+          ))}
+        </AnimatePresence>
+      </motion.div>
     </div>
   );
 }
@@ -163,9 +172,10 @@ export default function RankingTable({ data, className = '' }: RankingTableProps
 interface RigaTabellaProps {
   riga: ClassificaData['righe'][0];
   isEven: boolean;
+  index: number;
 }
 
-function RigaTabella({ riga, isEven }: RigaTabellaProps) {
+function RigaTabella({ riga, isEven, index }: RigaTabellaProps) {
   const { posizione, ospedale, punteggio, variazione, cittaRegione } = riga;
   const variazioneText = formatVariazione(variazione);
 
@@ -218,26 +228,65 @@ function RigaTabella({ riga, isEven }: RigaTabellaProps) {
     </>
   );
 
-  const rowClasses = `ranking-table-grid h-7 items-center border-b border-black  last:border-b-0 table-row-hover ${
+  const rowClasses = `ranking-table-grid h-7 items-center border-b border-black   table-row-hover ${
     isEven ? 'bg-gray-25' : 'bg-white'
   }`;
+
+  const rowVariants = {
+    initial: { 
+      opacity: 0,
+      y: 20
+    },
+    animate: { 
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.4,
+        delay: index * 0.05
+      }
+    },
+    exit: {
+      opacity: 0,
+      y: -20,
+      transition: {
+        duration: 0.2
+      }
+    }
+  };
 
   // Se l'ospedale ha una pagina di dettaglio, rendi la riga cliccabile
   if (ospedale.hasDetailPage) {
     return (
-      <Link 
-        href={`/ospedale/${ospedale.id}`}
-        className={`${rowClasses} hover:bg-blue-50 cursor-pointer`}
+      <motion.div
+        variants={rowVariants}
+        initial="initial"
+        animate="animate"
+        exit="exit"
+        layout
+        style={{ position: 'relative', zIndex: 1 }}
       >
-        {contenutoRiga}
-      </Link>
+        <Link 
+          href={`/ospedale/${ospedale.id}`}
+          className={`${rowClasses} cursor-pointer relative overflow-hidden hover-slide-bg`}
+        >
+          {contenutoRiga}
+        </Link>
+      </motion.div>
     );
   }
 
   // Altrimenti, solo una div normale
   return (
-    <div className={rowClasses}>
+    <motion.div 
+      className={rowClasses}
+      variants={rowVariants}
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      layout
+      style={{ position: 'relative', zIndex: 1 }}
+    >
       {contenutoRiga}
-    </div>
+    </motion.div>
   );
 }
