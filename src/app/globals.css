@@ -18,6 +18,20 @@
   animation: slide-down 0.3s ease-out;
 }
 
+/*/ Hide scrollbars for all browsers */
+html, body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+*{
+  scrollbar-width: none; /* Firefox */
+}
+
+
 @theme inline {
   --color-background: #F2F2F2;
   --color-blu: #0101A1;

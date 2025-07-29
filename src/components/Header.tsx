@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import RankingTable from './RankingTable';
 import { getOspedaliData } from '@/lib/data-loader';
+import { LogoBlack } from './Icons';
 
 export default function Header() {
   const ospedaliData = getOspedaliData();
@@ -29,12 +30,14 @@ export default function Header() {
         <div className='relative'>
         <div className="grid grid-cols-5">
 
-          <div className="text-sm uppercase flex items-center font-semibold col-span-1 border-r border-black pl-4 pr-2">
-            Best Italian Hospital
+          <div className="text-sm uppercase flex items-center font-semibold col-span-1 border-r border-black pl-4 pr-2 leading-none">
+            Best Italian Hospital award
           </div>
 
           <div className="col-span-3 flex justify-center items-center">
-            logo 
+            <a href="/" className="w-13 ">
+            <LogoBlack />
+            </a>
           </div>
           
           <button
@@ -56,8 +59,12 @@ export default function Header() {
             </svg>
           </button>
         </div>
-        {isModalOpen && (
-        <div className="left-0 top-6 right-0 z-100 bg-white border-b border-black animate-slide-down">
+     
+      </div>
+      </header>
+
+      {isModalOpen && (
+        <div className="fixed left-0 top-6 right-0 z-100 bg-white border-b border-black animate-slide-down">
           <div className="h-screen flex flex-col">
             <div className="flex-1 overflow-auto px-0">
               <RankingTable data={ospedaliData} />
@@ -65,9 +72,6 @@ export default function Header() {
           </div>
         </div>
       )}
-      </div>
-      </header>
-
      
     </>
   );

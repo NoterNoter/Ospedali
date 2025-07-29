@@ -50,8 +50,8 @@ export default function RankingTable({ data, className = '' }: RankingTableProps
   return (
     <div className={`w-full ${className}`}>
       {/* Prima riga intestazione - Classifiche per categoria */}
-      <div className="bg-blu text-white sticky top-0 h-5">
-        <div className="ranking-table-grid h-5">
+      <div className="bg-blu text-white sticky top-0 h-[50px]">
+        <div className="ranking-table-grid h-[50px]">
           <div className="flex items-center px-2 text-sm font-semibold text-center border-r border-blu">
             <strong>2025</strong>/
             CLASSIFICA
@@ -77,8 +77,8 @@ export default function RankingTable({ data, className = '' }: RankingTableProps
       </div>
 
       {/* Seconda riga intestazione - Colonne ordinabili */}
-      <div className="bg-white text-black h-5 border-y border-black sticky top-5">
-        <div className="ranking-table-grid h-5">
+      <div className="bg-white text-black h-[50px] border-y border-black sticky top-[50px]">
+        <div className="ranking-table-grid h-[50px]">
           <button 
             onClick={() => handleOrdinamento('posizione')}
             className="sortable-header px-2 text-sm text-left"

@@ -8,6 +8,7 @@ import ClassificaRow from '@/components/home/ClassificaRow';
 import ApprofondimentoRow from '@/components/home/ApprofondimentoRow';
 import SectionFlourish from '@/components/home/SectionFlourish';
 import Header from '@/components/Header';
+import SocialShare from '@/components/SocialShare';
 
 export default function Home() {
   const ospedaliData = getOspedaliData();
@@ -38,6 +39,10 @@ export default function Home() {
       <Spacing />
       <SectionFlourish data={homepageData.infografica_1} />
       <Spacing />
+      
+      <div className="flex justify-center py-8">
+        <SocialShare />
+      </div>
       </div>
 
     </main>
